@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
-import "./globals.css";
-import { NavLinks } from "@/app/ui/nav-links";
+import type { Metadata } from 'next'
+import { Roboto_Flex } from 'next/font/google'
+import './globals.css'
+import { NavLinks } from '@/app/ui/nav-links'
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
