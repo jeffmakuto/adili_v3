@@ -1,6 +1,5 @@
 'use client'
 
-import React from 'react'
 import { FallbackProps } from 'react-error-boundary'
 
 function GlobalError({ error, resetErrorBoundary }: FallbackProps) {
