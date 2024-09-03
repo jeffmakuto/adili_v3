@@ -106,6 +106,10 @@ nav li {
   transform: scaleX(1);
 }
 
+.link.active {
+  @apply font-bold;
+}
+
 .link.active::after {
   background-color: red;
 }
