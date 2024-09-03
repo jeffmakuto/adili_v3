@@ -2,8 +2,9 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { LinkType } from '@/types/link'
 
-const links = [
+const links: LinkType[] = [
   { href: '/', label: 'Home' },
   { href: '/policies', label: 'Policies' },
   { href: '/case-studies', label: 'Case Studies' },
