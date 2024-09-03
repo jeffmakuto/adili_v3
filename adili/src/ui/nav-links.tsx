@@ -17,15 +17,19 @@ export function NavLinks() {
 
   return (
     <nav aria-label="Main site navigation">
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          className={`link ${pathname === link.href ? 'active' : ''}`}
-          href={link.href}
-        >
-          {link.label}
-        </Link>
-      ))}
+      <ul>
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              className={`link ${pathname === link.href ? 'active' : ''}`}
+              href={link.href}
+              aria-current={pathname === link.href ? 'page' : undefined}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }
