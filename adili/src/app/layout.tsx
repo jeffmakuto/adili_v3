@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto_Flex } from 'next/font/google'
 import '../styles/globals.css'
-import { NavLinks } from '@/ui/nav-links'
+import NavLinks from '@/ui/nav-links'
 import GlobalError from '@/app/global-error'
 import { ErrorBoundary } from 'react-error-boundary'
 
