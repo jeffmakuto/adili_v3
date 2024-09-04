@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation'
-import NavLink from '@/ui/navigation/nav-link'
+import NavLink from '@/ui/nav-link'
 import { NavProps } from '@/types/link'
 
 const NavList: React.FC<NavProps> = ({ links }) => {

@@ -1,4 +1,4 @@
-import NavList from '@/ui/navigation/nav-list'
+import NavList from '@/ui/nav-list'
 import { NavProps } from '@/types/link'
 
 const NavContainer: React.FC<NavProps> = ({ links }) => (
