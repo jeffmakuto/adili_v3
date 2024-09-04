@@ -2,7 +2,7 @@
 
 import { faHome, faFileAlt, faBriefcase, faBullhorn, faComments } from '@fortawesome/free-solid-svg-icons'
 import { LinkType } from '@/types/link'
-import NavContainer from '@/ui/nav-container'
+import NavContainer from '@/ui/navigation/nav-container'
 
 const links: LinkType[] = [
   { href: '/', label: 'Home', icon: faHome, isActive: false },
