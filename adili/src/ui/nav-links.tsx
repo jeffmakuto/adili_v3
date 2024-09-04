@@ -16,17 +16,17 @@ export default function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <div className="py-4">
+    <div className="p-8">
       <nav aria-label="Main site navigation">
-        <ul className="flex space-x-4 list-none p-0 m-0">
+        <ul className="flex justify-end space-x-4 list-none p-0 m-0">
           {links.map((link) => {
             const isActive = pathname === link.href;
 
             return (
               <li key={link.href} className="relative inline">
                 <Link
-                  className={`relative text-inherit no-underline transition-all duration-300 
-                    ${isActive ? 'font-bold' : ''} 
+                  className={`relative text-inherit no-underline transition-all duration-300
+                    ${isActive ? 'font-bold' : ''}
                     group`}
                   href={link.href}
                   aria-current={isActive ? 'page' : undefined}
