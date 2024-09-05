@@ -3,7 +3,7 @@ import NavLinks from '@/ui/navigation/nav-links'
 
 export default function Header() {
     return (
-        <header className="flex flex-col">
+        <header className="flex flex-col p-4">
             <div className="w-full flex justify-center md:justify-end lg:justify-end">
                 <Banner />
             </div>
