@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Roboto_Flex } from 'next/font/google'
 import '../styles/globals.css'
-import NavLinks from '@/ui/navigation/nav-links'
 import GlobalError from '@/app/global-error'
 import { ErrorBoundary } from 'react-error-boundary'
+import Header from '@/ui/header/header'
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={robotoFlex.className}>
       <body>
-        <NavLinks />
+        <Header />
         <ErrorBoundary FallbackComponent={GlobalError}>
           <main>{children}</main>
         </ErrorBoundary>
