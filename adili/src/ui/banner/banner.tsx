@@ -1,26 +1,30 @@
-'use client'
+'use client';
 
-import { usePathname } from 'next/navigation'
-import BannerMessage from '@/ui/banner/message'
-import BannerImage from '@/ui/banner/image'
+import { usePathname } from 'next/navigation';
+import BannerMessage from '@/ui/banner/message';
+import BannerImage from '@/ui/banner/image';
+import useHoverEffect from '@/hooks/hover';
 
 export default function Banner() {
   const pathname = usePathname();
   const showBanner = pathname !== '/adili-chat';
+  const hoverEffect = useHoverEffect({
+    maxIterations: Infinity,
+    hoverDuration: 2000
+  });
 
   if (!showBanner) return null;
 
   return (
-    <div className="flex-shrink-0 p-4 bg-gradient-to-r from-red-500 to-gray-700 
-                    text-white rounded-lg shadow-lg transition-transform 
-                    transform hover:scale-105 hover:shadow-xl">
-      <div className="flex items-center">
-
-        <div className="w-1/3">
+    <div
+      className={`flex-shrink-0 p-4 bg-gray-100 text-white rounded-lg shadow-lg transition-transform transform 
+                  ${hoverEffect ? 'scale-105 shadow-xl' : ''}`}
+    >
+      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+        <div className="w-full md:w-7/10 flex justify-center">
           <BannerImage imageSrc='/images/banner.JPG' />
         </div>
-
-        <div className="w-2/3">
+        <div className="w-full md:w-3/10">
           <BannerMessage />
         </div>
       </div>
