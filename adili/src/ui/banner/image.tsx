@@ -3,7 +3,7 @@ import { BannerImageProps } from '@/types/banners'
 
 export default function BannerImage({ imageSrc }: BannerImageProps) {
   return (
-    <div className="relative w-20 h-20">
+    <div className="relative w-32 h-32">
       <Image
         src={imageSrc}
         alt="Adili Chat advert pop up notification"
