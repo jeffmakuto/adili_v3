@@ -1,14 +1,27 @@
-import NavList from '@/ui/navigation/nav-list'
+'use client'
+
+import React, { useState } from 'react'
+import DesktopMenu from '@/ui/menu/desktop'
+import MobileMenu from '@/ui/menu/mobile'
+import HamburgerMenuButton from '@/ui/menu/hamburger'
 import { NavProps } from '@/types/link'
 
-const NavContainer: React.FC<NavProps> = ({ links }) => (
-  <div className="p-4 bg-gray-100 mx-auto box-border">
-    <nav aria-label="Main site navigation" role="navigation">
-      <div className="overflow-x-auto">
-        <NavList links={links} />
-      </div>
-    </nav>
-  </div>
-);
+const NavContainer: React.FC<NavProps> = ({ links }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+
+  return (
+    <div className="p-4 bg-gray-100 mx-auto box-border">
+      <nav aria-label="Main site navigation" role="navigation" className="relative">
+        <DesktopMenu links={links} />
+        <div className="flex justify-between items-center lg:hidden">
+          <HamburgerMenuButton menuOpen={menuOpen} toggleMenu={toggleMenu} />
+        </div>
+        <MobileMenu menuOpen={menuOpen} toggleMenu={toggleMenu} links={links} />
+      </nav>
+    </div>
+  );
+};
 
 export default NavContainer;
