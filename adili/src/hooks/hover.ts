@@ -33,7 +33,7 @@ export default function useHoverEffect({
     }, flickDuration);
 
     // Schedule pause and restart flicks
-    const pauseDuration = hoverDuration + 3000; // Pause for total hoverDuration + 3 seconds
+    const pauseDuration = hoverDuration + 10000; // Pause for total hoverDuration + 10 seconds
     const pauseInterval = setInterval(() => {
       if (iterationCount >= maxIterations) {
         clearInterval(pauseInterval);
