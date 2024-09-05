@@ -5,10 +5,10 @@ export default function Header() {
     return (
         <header>
             <div className="w-full flex justify-between items-center px-4 py-2">
-                <div className="w-1/3 flex">
+                <div className="w-2/5 flex">
                     <NavLinks />
                 </div>
-                <div className="w-1/3 text-right">
+                <div className="w-3/10 text-right">
                     <Banner />
                 </div>
             </div>
