@@ -17,7 +17,7 @@ export default function Banner() {
 
   return (
     <div
-      className={`flex-shrink-0 p-4 bg-gray-100 text-white rounded-lg shadow-lg transition-transform transform 
+      className={`p-4 bg-gray-100 text-white rounded-lg shadow-lg transition-transform transform 
                   ${hoverEffect ? 'scale-105 shadow-xl' : ''}`}
     >
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
