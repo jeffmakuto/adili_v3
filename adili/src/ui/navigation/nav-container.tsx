@@ -12,7 +12,7 @@ const NavContainer: React.FC<NavProps> = ({ links }) => {
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   return (
-    <div className="p-4 bg-gray-100">
+    <div className="p-4 border border-white rounded-lg shadow-lg">
       <nav aria-label="Main site navigation" role="navigation" className="relative">
         <DesktopMenu links={links} />
         <div className="flex justify-between items-center lg:hidden">
