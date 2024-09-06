@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { BannerImageProps } from '@/types/banners';
+import Image from 'next/image'
+import { BannerImageProps } from '@/types/banners'
 
 export default function BannerImage({ imageSrc }: BannerImageProps) {
   return (

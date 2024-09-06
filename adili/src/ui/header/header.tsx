@@ -1,6 +1,6 @@
 import Banner from '@/ui/banner/banner'
 import NavLinks from '@/ui/navigation/nav-links'
-import BannerImage from '../images/image';
+import BannerImage from '@/ui/images/banner'
 
 export default function Header() {
     return (

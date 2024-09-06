@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { usePathname } from 'next/navigation';
-import BannerMessage from '@/ui/banner/message';
-import BannerImage from '@/ui/banner/image';
-import useHoverEffect from '@/hooks/hover';
+import { usePathname } from 'next/navigation'
+import BannerMessage from '@/ui/banner/message'
+import BannerImage from '@/ui/images/banner'
+import useHoverEffect from '@/hooks/hover'
 
 export default function Banner() {
   const pathname = usePathname();
