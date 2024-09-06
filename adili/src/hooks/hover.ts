@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { UseHoverEffectParams } from '@/types/banners';
+import { useState, useEffect } from 'react'
+import { UseHoverEffectParams } from '@/types/banners'
 
 export default function useHoverEffect({
   maxIterations = Infinity,

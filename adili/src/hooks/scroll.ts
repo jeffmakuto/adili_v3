@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react'
 
 const useScrollingAnimation = () => {
   const messageRef = useRef<HTMLDivElement | null>(null);
