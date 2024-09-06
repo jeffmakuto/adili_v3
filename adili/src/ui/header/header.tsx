@@ -6,13 +6,13 @@ export default function Header() {
     return (
         <header className="fixed top-0 w-full flex flex-col p-4 z-50">
             {/* Flex container for logo and banner */}
-            <div className="w-full flex flex-col items-center md:flex-row md:items-center md:justify-between">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between">
                 {/* Logo container */}
-                <div className="w-full flex justify-start md:justify-start mb-2 md:mb-0">
+                <div className="w-full flex justify-center md:justify-start">
                     <Logo />
                 </div>
                 {/* Banner container */}
-                <div className="w-full flex justify-start md:justify-end mt-2 md:mt-0">
+                <div className="w-full flex justify-center md:justify-end">
                     <Banner />
                 </div>
             </div>
