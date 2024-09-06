@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Logo = () => {
   return (
-    <div className="relative w-24 h-16 md:w-60 md:h-52">
+    <div className="relative w-48 h-40 lg:w-60 lg:h-40">
       <Image
         src="/images/logo.png"
         alt="Company Logo"
