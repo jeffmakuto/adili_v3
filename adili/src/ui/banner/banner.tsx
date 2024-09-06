@@ -22,7 +22,7 @@ export default function Banner() {
     >
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
         <div className="w-full md:w-7/10 flex justify-center">
-          <BannerImage imageSrc='/images/banner.JPG' />
+          <BannerImage imageSrc='/images/banner.png' />
         </div>
         <div className="w-full md:w-3/10">
           <BannerMessage />
