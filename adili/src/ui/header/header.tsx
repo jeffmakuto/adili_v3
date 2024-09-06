@@ -8,11 +8,11 @@ export default function Header() {
             {/* Flex container for logo and banner */}
             <div className="w-full flex flex-col items-center md:flex-row md:items-center md:justify-between">
                 {/* Logo container */}
-                <div className="w-full flex justify-start md:justify-start">
+                <div className="w-full flex justify-start md:justify-start mb-2 md:mb-0">
                     <Logo />
                 </div>
                 {/* Banner container */}
-                <div className="w-full flex justify-start md:justify-end">
+                <div className="w-full flex justify-start md:justify-end mt-2 md:mt-0">
                     <Banner />
                 </div>
             </div>
