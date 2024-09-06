@@ -10,16 +10,16 @@ export default function Header() {
             {/* Flex container for logo and banner */}
             <div className="w-full flex flex-col md:flex-row items-center justify-between">
                 {/* Logo container */}
-                <div className="p-4 w-full flex justify-center md:justify-start">
+                <div className="p-4 w-full flex justify-center md:justify-start sm:mt-[0px] md:mt-[-20px] lg:mt-[-40px]">
                     <Logo />
                 </div>
                 {/* Banner container */}
-                <div className="p-4 w-full flex justify-center md:justify-end">
+                <div className="p-4 w-full flex justify-center md:justify-end sm:mt-[20px] md:mt-[0px] lg:mt-[-20px]">
                     <Banner />
                 </div>
             </div>
             {/* NavLinks container */}
-            <div className="p-4 w-full flex justify-start">
+            <div className="p-4 w-full flex justify-start sm:mt-[0px] md:mt-[-20px] lg:mt-[-40px]">
                 <NavLinks />
             </div>
         </header>
