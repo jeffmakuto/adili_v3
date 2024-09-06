@@ -16,8 +16,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={robotoFlex.className}>
       <body>
-        <Header />
         <ErrorBoundary FallbackComponent={GlobalError}>
+          <Header />
           <main>{children}</main>
         </ErrorBoundary>
       </body>
