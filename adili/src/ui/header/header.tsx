@@ -1,10 +1,16 @@
 import Banner from '@/ui/banner/banner'
 import NavLinks from '@/ui/navigation/nav-links'
+import BannerImage from '../images/image';
 
 export default function Header() {
     return (
         <header className="flex flex-col p-4">
-            <div className="w-full flex justify-center md:justify-end lg:justify-end">
+            {/* Logo positioned on the extreme left for medium and large screens */}
+            <div className="w-full flex justify-center md:justify-between lg:justify-between">
+                {/* Hide on small screens and show on medium and larger */}
+                <div className="hidden md:block lg:block">
+                    <BannerImage imageSrc='/images/KQ Logo.jpg' />
+                </div>
                 <Banner />
             </div>
             <div className="w-full flex justify-center md:justify-start lg:justify-start">
