@@ -1,27 +1,15 @@
-import Banner from '@/ui/banner/banner'
-import NavLinks from '@/ui/navigation/nav-links'
-import Logo from '@/ui/images/logo'
-import ScrollingMessage from '@/ui/header/scroll'
+import ScrollingMessage from '@/ui/header/scroll';
+import Nav from '@/ui/navigation/nav';
 
 export default function Header() {
-    return (
-        <header className="fixed top-0 w-full flex flex-col p-4 z-50">
-            <ScrollingMessage />
-            {/* Flex container for logo and banner */}
-            <div className="w-full flex flex-col md:flex-row items-center justify-between">
-                {/* Logo container */}
-                <div className="p-4 w-full flex justify-center md:justify-start sm:mt-[0px] md:mt-[-20px] lg:mt-[-40px]">
-                    <Logo />
-                </div>
-                {/* Banner container */}
-                <div className="p-4 w-full flex justify-center md:justify-end sm:mt-[20px] md:mt-[0px] lg:mt-[-20px]">
-                    <Banner />
-                </div>
-            </div>
-            {/* NavLinks container */}
-            <div className="p-4 w-full flex justify-start sm:mt-[0px] md:mt-[-20px] lg:mt-[-40px]">
-                <NavLinks />
-            </div>
-        </header>
-    );
+  return (
+    <header>
+      <div className="fixed top-0 w-full flex flex-col z-50">
+        <ScrollingMessage />
+      </div>
+      <div className="mt-16">
+        <Nav />
+      </div>
+    </header>
+  );
 }

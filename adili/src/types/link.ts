@@ -7,7 +7,11 @@ export type LinkType = {
     isActive: boolean;
   };
 
-export type NavProps = {
+export type MenuProps = {
     links: LinkType[];
   };
+
+export type NavItemProps = LinkType & {
+  onClick?: () => void;
+};  
   
