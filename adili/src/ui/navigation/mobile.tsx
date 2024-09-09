@@ -17,7 +17,10 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
         onClick={toggleMenu}
         className={`mx-4 md:hidden ${isOpen ? 'hidden' : 'block'}`}
       >
-        <FontAwesomeIcon icon={faBars} />
+        <FontAwesomeIcon
+          icon={faBars}
+          size="2x"
+        />
       </button>
       {isOpen && (
         <>
