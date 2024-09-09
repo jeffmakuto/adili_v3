@@ -1,11 +1,12 @@
 'use client'
+
 import useScrollingAnimation from '@/hooks/scroll'
 
 const ScrollingMessage: React.FC = () => {
   const messageRef = useScrollingAnimation();
 
   return (
-    <div className="w-full py-2 border border-white rounded-lg shadow-lg">
+    <div className="w-full py-2 shadow-lg">
       <div className="flex items-center whitespace-nowrap overflow-hidden">
         <div 
           className="animate-scroll"
