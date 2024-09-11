@@ -9,7 +9,7 @@ const Menu: React.FC<MenuProps> = ({ links }) => {
 
   return (
     <nav>
-      <div className="hidden md:flex gap-4 items-center overflow-x-auto whitespace-nowrap mx-4">
+      <div className="hidden md:flex gap-4 items-center whitespace-nowrap">
         {links.map(link => (
           <NavItem
             key={link.href}

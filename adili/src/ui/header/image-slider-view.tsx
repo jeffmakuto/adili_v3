@@ -25,7 +25,7 @@ const ImageSliderView = ({ images, currentIndex }: { images: ImageData[], curren
 
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden shadow-lg"
       style={{ height: containerHeight }}
     >
       <div
@@ -43,7 +43,7 @@ const ImageSliderView = ({ images, currentIndex }: { images: ImageData[], curren
               alt={`Slider Image ${index + 1}`}
               width={image.width}
               height={image.height}
-              className="w-full h-full object-contain rounded-xl"
+              className="w-full h-full object-contain"
               priority={index === 0}
             />
           </div>

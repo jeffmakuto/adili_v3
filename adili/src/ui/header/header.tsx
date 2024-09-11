@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       {/* Fixed Scrolling Message */}
-      <div className="fixed top-0 w-full flex flex-col z-50 bg-white">
+      <div className="fixed top-0 w-full z-50 bg-white">
         <ScrollingMessage />
       </div>
       {/* Slider Image */}
@@ -14,7 +14,7 @@ export default function Header() {
         <ImageSlider />
       </div>
       {/* Navigation */}
-      <div className="mt-16">
+      <div className="mx-4 mt-6 shadow-lg inline-block">
         <Nav />
       </div>
     </header>

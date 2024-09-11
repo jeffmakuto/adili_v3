@@ -9,16 +9,13 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick 
     rounded-md cursor-pointer
     flex items-center space-x-3
     p-2
-    sm:p-3
-    md:p-4
-    lg:p-5
-    text-sm sm:text-base md:text-lg lg:text-xl
+    text-base sm:text-base md:text-base lg:text-lg
   `;
 
   const iconClass = `
     ${isActive ? 'text-red-600' : 'text-gray-700'}
     flex-shrink-0
-    text-base sm:text-lg md:text-xl lg:text-2xl
+    text-base sm:text-base md:text-base lg:text-lg
   `;
 
   return (
