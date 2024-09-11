@@ -1,11 +1,11 @@
 'use client'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import NavItem from '@/ui/navigation/nav-item'
-import useMobileMenu from '@/hooks/use-mobile-menu'
-import { MenuProps } from '@/types/link'
-import { usePathname } from 'next/navigation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import NavItem from '@/ui/navigation/nav-item';
+import useMobileMenu from '@/hooks/use-mobile-menu';
+import { MenuProps } from '@/types/link';
+import { usePathname } from 'next/navigation';
 
 const MobileMenu: React.FC<MenuProps> = ({ links }) => {
   const { isOpen, toggleMenu, closeMenu, menuRef } = useMobileMenu();
@@ -13,14 +13,11 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
 
   return (
     <>
-      <button 
+      <button
         onClick={toggleMenu}
         className={`mx-4 md:hidden ${isOpen ? 'hidden' : 'block'}`}
       >
-        <FontAwesomeIcon
-          icon={faBars}
-          size="2x"
-        />
+        <FontAwesomeIcon icon={faBars} size="2x" />
       </button>
       {isOpen && (
         <>
@@ -34,15 +31,15 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
           >
             <div className="px-4 py-16">
               {links.map(link => (
-                <div key={link.href} className="mb-8">
-                  <NavItem
-                    href={link.href}
-                    label={link.label}
-                    icon={link.icon}
-                    isActive={asPath === link.href}
-                    onClick={closeMenu}
-                  />
-                </div>
+                <NavItem
+                  key={link.href}
+                  href={link.href}
+                  label={link.label}
+                  icon={link.icon}
+                  isActive={asPath === link.href}
+                  onClick={closeMenu}
+                  subNavLinks={link.subNavLinks}
+                />
               ))}
             </div>
           </div>

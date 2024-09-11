@@ -1,32 +1,46 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconProp, IconDefinition } from '@fortawesome/fontawesome-svg-core'
-import Link from 'next/link'
-import { NavItemProps } from '@/types/link'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp, IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import Link from 'next/link';
+import { NavItemProps } from '@/types/link';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { getItemClass, getIconClass, getLinkClass, getDropdownClass, getSubNavLinkClass } from '@/styles/nav-item-styles'
+import useNavItem from '@/hooks/use-nav-item'
 
-const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick }) => {
-  const itemClass = `
-    ${isActive ? 'bg-red-600 text-white border border-red-600' : 'text-gray-700 hover:bg-red-600 hover:text-white'}
-    rounded-md cursor-pointer
-    flex items-center space-x-3
-    p-2
-    text-base sm:text-base md:text-base lg:text-lg
-  `;
-
-  const iconClass = `
-    ${isActive ? 'text-red-600' : 'text-gray-700'}
-    flex-shrink-0
-    text-base sm:text-base md:text-base lg:text-lg
-  `;
+const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick, subNavLinks }) => {
+  const { isOpen, handleMouseEnter, handleMouseLeave, handleClick } = useNavItem({ subNavLinks, onClick });
 
   return (
-    <Link href={href} passHref>
-      <div onClick={onClick} className={itemClass}>
-        <span className={`${isActive ? 'bg-white' : 'bg-gray-200'} p-2 rounded-full`}>
-          <FontAwesomeIcon icon={icon as IconDefinition | IconProp} className={iconClass} />
-        </span>
-        <span>{label}</span>
-      </div>
-    </Link>
+    <div
+      className="relative group"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Link href={href} passHref>
+        <div onClick={handleClick} className={getItemClass(isActive)}>
+          <span className={`${isActive ? 'bg-white' : 'bg-gray-200'} p-2 rounded-full`}>
+            <FontAwesomeIcon icon={icon as IconDefinition | IconProp} className={getIconClass(isActive)} />
+          </span>
+          <span className={`flex-grow ${getLinkClass(isActive)}`}>
+            {label}
+          </span>
+          {subNavLinks && (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )}
+        </div>
+      </Link>
+      {subNavLinks && isOpen && (
+        <div className={getDropdownClass()}>
+          {subNavLinks.map(subLink => (
+            <Link key={subLink.href} href={subLink.href} passHref>
+              <div className={getSubNavLinkClass()}>
+                {subLink.label}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 

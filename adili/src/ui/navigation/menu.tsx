@@ -1,8 +1,8 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
-import NavItem from '@/ui/navigation/nav-item'
-import { MenuProps } from '@/types/link'
+import { usePathname } from 'next/navigation';
+import NavItem from '@/ui/navigation/nav-item';
+import { MenuProps } from '@/types/link';
 
 const Menu: React.FC<MenuProps> = ({ links }) => {
   const asPath = usePathname();
@@ -17,6 +17,7 @@ const Menu: React.FC<MenuProps> = ({ links }) => {
             label={link.label}
             icon={link.icon}
             isActive={asPath === link.href}
+            subNavLinks={link.subNavLinks}
           />
         ))}
       </div>
