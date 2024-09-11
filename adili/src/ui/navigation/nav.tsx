@@ -38,7 +38,7 @@ const links: LinkType[] = [
     ]
   },
   { href: '/case-studies', label: 'Case Studies', icon: faBriefcase, isActive: false },
-  { href: '/act-right-speak-up', label: 'Our Ambassadors', icon: faBullhorn, isActive: false },
+  { href: '/our-ambassadors', label: 'Our Ambassadors', icon: faBullhorn, isActive: false },
   { href: '/adili-chat', label: 'Adili Chat', icon: faComments, isActive: false }
 ];
 
