@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto_Flex } from 'next/font/google'
 import '../styles/globals.css'
-import GlobalError from '@/app/global-error'
+import GlobalError from '@/errors/global-error'
 import { ErrorBoundary } from 'react-error-boundary'
 import Header from '@/ui/header/header'
 
