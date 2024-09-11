@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 
 const useMobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
@@ -11,6 +12,7 @@ const useMobileMenu = () => {
   const closeMenu = useCallback(() => {
     if (isOpen) {
       setIsOpen(false);
+      setIsSubMenuOpen(false);
     }
   }, [isOpen]);
 
@@ -46,8 +48,10 @@ const useMobileMenu = () => {
 
   return {
     isOpen,
+    isSubMenuOpen,
     toggleMenu,
     closeMenu,
+    setIsSubMenuOpen,
     menuRef,
   };
 };

@@ -8,7 +8,7 @@ import { MenuProps } from '@/types/link';
 import { usePathname } from 'next/navigation';
 
 const MobileMenu: React.FC<MenuProps> = ({ links }) => {
-  const { isOpen, toggleMenu, closeMenu, menuRef } = useMobileMenu();
+  const { isOpen, isSubMenuOpen, toggleMenu, closeMenu, setIsSubMenuOpen, menuRef } = useMobileMenu();
   const asPath = usePathname();
 
   return (
@@ -37,7 +37,14 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
                   label={link.label}
                   icon={link.icon}
                   isActive={asPath === link.href}
-                  onClick={closeMenu}
+                  onClick={() => {
+                    // Open the sub-menu if there are sub-nav links
+                    if (link.subNavLinks) {
+                      setIsSubMenuOpen(true);
+                    } else {
+                      closeMenu(); // Close the menu if no sub-nav links
+                    }
+                  }}
                   subNavLinks={link.subNavLinks}
                 />
               ))}
