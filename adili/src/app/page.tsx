@@ -1,8 +1,13 @@
+import Hero from '@/ui/home/hero'
+import Values from '@/ui/home/values'
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Ethics & Integrity</h1>
+    <main className="mt-8">
+      <Hero />
+      <Values />
     </main>
   );
-}
+};
+
+export default Home;
