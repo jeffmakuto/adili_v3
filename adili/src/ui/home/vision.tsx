@@ -3,7 +3,6 @@ const Vision: React.FC = () => {
     <div>
       <h2 className="text-3xl font-extrabold">
         <em className="text-red-600">
-          Our<br />
           Vision
         </em>
       </h2>
