@@ -1,7 +1,7 @@
-import TitleDescription from '@/ui/home/title-description';
-import HeroImage from '@/ui/home/hero-image';
-import Mission from '@/ui/home/mission';
-import Vision from '@/ui/home/vision';
+import TitleDescription from '@/ui/home/title-description'
+import HeroImage from '@/ui/home/hero-image'
+import Mission from '@/ui/home/mission'
+import Vision from '@/ui/home/vision'
 
 const Hero: React.FC = () => {
   return (
