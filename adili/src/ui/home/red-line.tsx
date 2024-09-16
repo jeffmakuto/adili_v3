@@ -1,9 +1,6 @@
 const RedLine: React.FC = () => {
   return (
-    <div>
-      {/* Static Red Line */}
-      <div className="w-full h-2 bg-red-500"></div>
-    </div>
+    <div className="w-full h-2 bg-red-500"></div>
   );
 };
 
