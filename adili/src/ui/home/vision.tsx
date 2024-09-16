@@ -1,3 +1,11 @@
+import { SubNavLink } from '@/types/link'
+import LearnMoreButton from '@/ui/buttons/learn-more'
+
+const subLink: SubNavLink = {
+  href: '/home/vision',
+  label: 'Our Vision',
+};
+
 const Vision: React.FC = () => {
   return (
     <div>
@@ -16,6 +24,9 @@ const Vision: React.FC = () => {
           </strong>
         </em>
       </p>
+      <div className="flex">
+        <LearnMoreButton subLink={subLink} />
+      </div>
     </div>
   );
 };
