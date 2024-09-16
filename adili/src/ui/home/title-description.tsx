@@ -7,7 +7,7 @@ const TitleDescription: React.FC = () => {
         new horizon
       </h1>
       <p className="text-lg text-gray-700">
-        Introducing our revamped mission and vision<br />
+        Introducing our revamped <strong>mission and vision</strong><br />
         statements showing our commitment to innovation,<br />
         inclusivity, sustainability, and adaptability.
       </p>
