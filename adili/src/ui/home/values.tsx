@@ -6,7 +6,7 @@ import Accountability from '@/ui/home/values/accountability'
 const Values: React.FC = () => {
   return (
     <section className="w-full bg-gray-50 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Core Values</h2>
+      <h2 className="text-3xl font-bold text-red-600 mb-8 pl-6">Our Core Values</h2>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <Safety />
         <CustomerObsession />
