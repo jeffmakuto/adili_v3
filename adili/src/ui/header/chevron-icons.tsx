@@ -35,3 +35,22 @@ export const ChevronRightIcon: React.FC<IconProps> = ({ className }) => (
         86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
   </svg>
 );
+
+export const ChevronDownIcon: React.FC<IconProps> = ({ className }) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fas"
+    data-icon="chevron-down"
+    className={className}
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
+    style={{ transform: 'scale(1.5)' }}
+  >
+    <path fill="white" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192
+      192c-12.5 12.5-32.8 12.5-45.3 0l-192-192c-12.5-12.5-12.5-32.8
+      0-45.3s32.8-12.5 45.3 0L160 340.7 265.3 233.4c12.5-12.5 32.8-12.5
+      45.3 0z" />
+  </svg>
+);
