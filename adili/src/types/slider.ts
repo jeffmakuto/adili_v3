@@ -14,3 +14,7 @@ export type SliderControlsProps = {
     prevSlide: () => void;
     nextSlide: () => void;
 }
+
+export type IconProps = {
+    className?: string;
+}
