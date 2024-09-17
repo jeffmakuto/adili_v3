@@ -1,6 +1,6 @@
 const RedLine: React.FC = () => {
   return (
-    <div className="w-full h-2 bg-red-500"></div>
+    <div className="w-full h-1.5 bg-red-600"></div>
   );
 };
 
