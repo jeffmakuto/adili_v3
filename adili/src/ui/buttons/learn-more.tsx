@@ -7,7 +7,7 @@ const LearnMoreButton: FC<LearnMoreButtonProps> = ({ subLink }) => {
       <div className="flex justify-center mt-4">
         <Link
           href={subLink.href}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm md:text-sm lg:text-lg py-2 px-4 rounded-full transition duration-300 ease-in-out"
         >
           Learn More
         </Link>
