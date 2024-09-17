@@ -8,13 +8,13 @@ const subLink: SubNavLink = {
 
 const Vision: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-3xl font-extrabold">
+    <div className="md:pt-28">
+      <h2 className="text-lg md:text-xl lg:text-3xl font-extrabold">
         <em className="text-red-600">
           Vision
         </em>
       </h2>
-      <p>
+      <p className="text-sm md:text-sm lg:text-lg">
         <em>
           <strong>
             To propel Africa&rsquo;s<br />

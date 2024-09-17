@@ -1,6 +1,7 @@
 import { SubNavLink } from '@/types/link'
 import LearnMoreButton from '@/ui/buttons/learn-more'
 import ValuesImage from '@/ui/home/values/values-image'
+import { container, heading, paragraph, buttonWrapper } from '@/styles/values'
 
 const subLink: SubNavLink = {
   href: '/home/customer-obsession',
@@ -9,13 +10,13 @@ const subLink: SubNavLink = {
 
 const CustomerObsession: React.FC = () => {
   return (
-    <div className="bg-white p-6">
+    <div className={container}>
       <ValuesImage src="/images/customer obsession.jpg" alt="Customer Obsession" />
-      <h3 className="text-2xl font-semibold mt-4 text-red-600">Customer Obsession</h3>
-      <p className="text-gray-600 mt-2">
+      <h3 className={heading}>Customer Obsession</h3>
+      <p className={paragraph}>
         I commit to creating positive memorable experiences for our customers.
       </p>
-      <div className="flex">
+      <div className={buttonWrapper}>
         <LearnMoreButton subLink={subLink} />
       </div>
     </div>
