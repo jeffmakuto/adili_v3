@@ -4,7 +4,7 @@ import useScrollingAnimation from '@/hooks/scroll'
 import scrollContent from '@/data/scroll-content.json'
 
 const ScrollingMessage: React.FC = () => {
-  const scrollDuration = 60;
+  const scrollDuration = 30;
   const messageRef = useScrollingAnimation(scrollDuration);
 
   return (
