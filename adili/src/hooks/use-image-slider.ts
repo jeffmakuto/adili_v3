@@ -15,7 +15,7 @@ export function useImageSlider() {
 
   useEffect(() => {
     if (!isHovered) {
-      const interval = setInterval(nextSlide, 5000);
+      const interval = setInterval(nextSlide, 10000);
       return () => clearInterval(interval);
     }
   }, [isHovered]);
