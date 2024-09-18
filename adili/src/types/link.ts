@@ -25,3 +25,8 @@ export type UseNavItemProps = {
   subNavLinks?: { href: string; label: string }[];
   onClick?: () => void;
 }
+
+export type MenuToggleButtonProps = {
+  onClick: () => void;
+  isOpen: boolean;
+}

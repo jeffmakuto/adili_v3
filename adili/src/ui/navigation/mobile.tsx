@@ -1,11 +1,10 @@
 'use client'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import NavItem from '@/ui/navigation/nav-item';
-import useMobileMenu from '@/hooks/use-mobile-menu';
-import { MenuProps } from '@/types/link';
-import { usePathname } from 'next/navigation';
+import NavItem from '@/ui/navigation/nav-item'
+import useMobileMenu from '@/hooks/use-mobile-menu'
+import { MenuProps } from '@/types/link'
+import { usePathname } from 'next/navigation'
+import MenuToggleButton from '@/ui/navigation/menu-toggle-button'
 
 const MobileMenu: React.FC<MenuProps> = ({ links }) => {
   const { isOpen, isSubMenuOpen, toggleMenu, closeMenu, setIsSubMenuOpen, menuRef } = useMobileMenu();
@@ -13,12 +12,7 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
 
   return (
     <>
-      <button
-        onClick={toggleMenu}
-        className={`mx-4 md:hidden ${isOpen ? 'hidden' : 'block'}`}
-      >
-        <FontAwesomeIcon icon={faBars} size="2x" />
-      </button>
+      <MenuToggleButton onClick={toggleMenu} isOpen={isOpen} />
       {isOpen && (
         <>
           <div
@@ -27,7 +21,8 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
           />
           <div
             ref={menuRef}
-            className="fixed top-0 left-0 w-3/5 h-full bg-white shadow-lg z-50"
+            className="fixed top-0 left-0 w-3/5 h-full bg-white shadow-lg z-50 transition-transform transform duration-300 ease-in-out"
+            style={{ transform: isOpen ? 'translateX(0)' : 'translateX(-100%)' }}
           >
             <div className="px-4 py-16">
               {links.map(link => (
