@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react'
 
 const useScrollingAnimation = (scrollDuration: number) => {
   const messageRef = useRef<HTMLDivElement | null>(null);
@@ -6,16 +6,32 @@ const useScrollingAnimation = (scrollDuration: number) => {
   useEffect(() => {
     const updateAnimation = () => {
       if (messageRef.current) {
-        // Apply the animation duration dynamically
+        /* Apply the animation duration dynamically */
         messageRef.current.style.setProperty('--scroll-duration', `${scrollDuration}s`);
       }
     };
 
     updateAnimation();
-    window.addEventListener('resize', updateAnimation);
+    
+    const handleResize = () => {
+      updateAnimation();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    /* Optional: Using ResizeObserver if needed */
+    const resizeObserver = new ResizeObserver(updateAnimation);
+    const currentMessageRef = messageRef.current;
+    if (currentMessageRef) {
+      resizeObserver.observe(currentMessageRef);
+    }
 
     return () => {
-      window.removeEventListener('resize', updateAnimation);
+      window.removeEventListener('resize', handleResize);
+      if (currentMessageRef) {
+        resizeObserver.unobserve(currentMessageRef);
+      }
+      resizeObserver.disconnect();
     };
   }, [scrollDuration]);
 
