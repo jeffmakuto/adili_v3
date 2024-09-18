@@ -18,3 +18,7 @@ export type SliderControlsProps = {
 export type IconProps = {
     className?: string;
 }
+
+export type ChevronDownIconProps = IconProps & {
+    isActive: boolean;
+}

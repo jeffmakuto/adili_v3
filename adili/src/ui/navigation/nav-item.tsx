@@ -24,7 +24,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick,
             {label}
           </span>
           {subNavLinks && (
-            <ChevronDownIcon className="w-4 h-4" />
+            <ChevronDownIcon className="w-4 h-4" isActive={isActive} />
           )}
         </div>
       </Link>
