@@ -69,16 +69,12 @@ body {
 
 /* Scroll Animation */
 @keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 .animate-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll 30s linear infinite;
+  animation: scroll var(--scroll-duration) linear infinite;
 }
