@@ -12,13 +12,13 @@ const MenuToggleButton: React.FC<MenuToggleButtonProps> = ({ onClick, isOpen }) 
       viewBox="0 0 24 24"
       fill="none"
       stroke="red"
-      strokeWidth="2"
+      strokeWidth="3"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       <path d="M4 6h16M4 12h16m-7 6h7" />
     </svg>
-    <span className="ml-2 font-bold text-lg text-red-600">MENU</span>
+    <span className="ml-2 font-black text-lg text-red-600">MENU</span>
   </button>
 );
 
