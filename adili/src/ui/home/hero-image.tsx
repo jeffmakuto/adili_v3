@@ -4,7 +4,7 @@ const HeroImage: React.FC = () => {
   return (
     <div className="relative w-full aspect-[3/2]">
       <Image
-        src="/images/banner.jpg"
+        src="/images/banner.JPG"
         alt="Crew Members"
         fill
         style={{ objectFit: 'contain' }}
