@@ -1,4 +1,5 @@
 'use client'
+
 import React from 'react'
 import useScrollingAnimation from '@/hooks/scroll'
 import scrollContent from '@/data/scroll-content.json'
