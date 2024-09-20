@@ -23,7 +23,7 @@ const ScrollingMessage: React.FC = () => {
             <span className="text-black">
               {items.map((item, index) => (
                 <React.Fragment key={index}>
-                  {index > 0 && <span className="text-red-600 px-2 text-xl font-bold">|</span>}
+                  {index > 0 && <span className="text-red-600 px-2 text-xl font-bold">•</span>}
                   {item}
                 </React.Fragment>
               ))}
