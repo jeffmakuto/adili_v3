@@ -31,8 +31,8 @@ const links: LinkType[] = [
       { href: '/policies/safeguarding', label: 'Safeguarding' },
       { href: '/policies/competition-law', label: 'Competition Law' },
       { href: '/policies/anti-bribery', label: 'Anti-bribery and Anti-corruption' },
-      { href: '/policies/act-right-speak-up', label: 'Act Right Speak Up' },
-      { href: '/policies/preventing-criminal-financing', label: 'Preventing criminal financing activities' },
+      { href: '/policies/act-right-speak-up', label: 'Act Right, Speak Up' },
+      { href: '/policies/preventing-criminal-financing', label: 'Preventing Criminal Financing Activities' },
       { href: '/policies/external-activities', label: 'External Activities' },
       { href: '/policies/company-assets', label: 'Company Assets' }
     ]
