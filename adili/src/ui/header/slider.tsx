@@ -2,17 +2,17 @@
 
 import ImageSliderView from '@/ui/header/image-slider-view'
 import { SliderControls, SliderDots } from '@/ui/header/slider-controls'
-import { useImageSlider } from '@/hooks/use-image-slider'
+import useAutoSwipe from '@/hooks/auto-swipe'
 import { images } from '@/data/slider'
 
 export default function ImageSlider(): JSX.Element {
   const {
     currentIndex,
     setCurrentIndex,
-    prevSlide,
-    nextSlide,
+    nextItem,
+    prevItem,
     setIsHovered,
-  } = useImageSlider();
+  } = useAutoSwipe(images.length);
 
   return (
     <div 
@@ -22,8 +22,8 @@ export default function ImageSlider(): JSX.Element {
     >
       <ImageSliderView images={images} currentIndex={currentIndex} />
       <SliderControls 
-        prevSlide={prevSlide}
-        nextSlide={nextSlide}
+        prevSlide={prevItem}
+        nextSlide={nextItem}
       />
       <SliderDots 
         images={images}
