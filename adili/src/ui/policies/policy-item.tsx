@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { PolicyItemProps } from '@/types/policies'
 import { heading, paragraph } from '@/styles/values'
 
+const SIGN_INTEGRITY_CODE = process.env.NEXT_PUBLIC_SIGN_INTEGRITY_CODE || "#";
+
 const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: boolean; onToggle: () => void }> = ({ policy, isExpanded, onToggle }) => (
     <div
         className="flex justify-between items-center cursor-pointer
@@ -42,7 +44,7 @@ const PolicyContent: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: b
                     <>
                         {policy.description} Integrity Code{' '}
                         <Link
-                            href={process.env.SIGN_INTEGRITY_CODE}
+                            href={SIGN_INTEGRITY_CODE}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-red-600 underline"
