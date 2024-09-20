@@ -42,7 +42,7 @@ const PolicyContent: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: b
                     <>
                         {policy.description} Integrity Code{' '}
                         <Link
-                            href="https://forms.office.com/pages/responsepage.aspx?id=2ap03WnFOka8FwuiWo-jiJuoJe_UuntDvDF5yRWFgDpUMlc4UktGMjZLNVlMV1ROOUQxMURLSko1WC4u&route=shorturl"
+                            href={process.env.SIGN_INTEGRITY_CODE}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-red-600 underline"
