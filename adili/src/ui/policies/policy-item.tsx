@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { PolicyItemProps } from '@/types/policies'
-import { heading, paragraph } from '@/styles/values'
+import Image from 'next/image';
+import Link from 'next/link';
+import { PolicyItemProps } from '@/types/policies';
+import { heading, paragraph } from '@/styles/values';
 
 const SIGN_INTEGRITY_CODE = process.env.NEXT_PUBLIC_SIGN_INTEGRITY_CODE || "#";
 
@@ -10,8 +10,9 @@ const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: bo
         className="flex justify-between items-center cursor-pointer
         hover:bg-gray-200 p-4 rounded-lg transition ease-in-out duration-200"
         onClick={onToggle}
-        aria-expanded={isExpanded}
+        aria-expanded={isExpanded ? "true" : "false"}
         aria-controls={`policy-content-${policy.id}`}
+        role="button"
     >
         <div className="flex flex-col sm:flex-row items-start sm:items-center">
             <div className="flex-shrink-0">
@@ -38,7 +39,7 @@ const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: bo
 
 const PolicyContent: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: boolean; index: number }> = ({ policy, isExpanded, index }) => (
     isExpanded && (
-        <div id={`policy-content-${index}`} className="mt-4 px-4">
+        <div id={`policy-content-${policy.id}`} className="mt-4 px-4">
             <p className={paragraph}>
                 {policy.id === '1' ? (
                     <>
