@@ -6,17 +6,10 @@ const SearchBar = ({ searchTerm, onSearchChange }: SearchBarProps) => (
     <input
       type="text"
       placeholder="Search policies..."
-      className={`px-4 py-2 border rounded-lg w-full md:w-1/2 border-gray-300
-        shadow-sm focus:outline-none transition duration-150 ${paragraph}`}
+      className={`px-4 py-2 border rounded-lg w-full md:w-1/2 border-gray-300 shadow-sm focus:outline-none transition duration-150 ${paragraph}`}
       value={searchTerm}
       onChange={onSearchChange}
-      style={{}}
     />
-    <style jsx>{`
-      input::placeholder {
-        ${paragraph};
-      }
-    `}</style>
   </section>
 );
 
