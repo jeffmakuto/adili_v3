@@ -1,8 +1,7 @@
-import { FC } from 'react';
-import Menu from '@/ui/navigation/menu';
-import MobileMenu from '@/ui/navigation/mobile';
-import { faHome, faFileAlt, faBriefcase, faBullhorn, faComments } from '@fortawesome/free-solid-svg-icons';
-import { LinkType } from '@/types/link';
+import Menu from '@/ui/navigation/menu'
+import MobileMenu from '@/ui/navigation/mobile'
+import { faHome, faFileAlt, faBriefcase, faBullhorn, faComments } from '@fortawesome/free-solid-svg-icons'
+import { LinkType } from '@/types/link'
 
 const links: LinkType[] = [
   {
@@ -42,7 +41,7 @@ const links: LinkType[] = [
   { href: '/adili-chat', label: 'Adili Chat', icon: faComments, isActive: false }
 ];
 
-const Nav: FC = () => (
+const Nav: React.FC = () => (
   <>
     <Menu links={links} />
     <MobileMenu links={links} />

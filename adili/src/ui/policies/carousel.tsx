@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import useAutoSwipe from '@/hooks/auto-swipe';
-import { heading, paragraph } from '@/styles/values';
-import LearnMoreButton from '@/ui/buttons/learn-more';
-import { SliderDots } from '@/ui/header/slider-controls';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import useAutoSwipe from '@/hooks/auto-swipe'
+import { heading, paragraph } from '@/styles/values'
+import LearnMoreButton from '@/ui/buttons/learn-more'
+import { SliderDots } from '@/ui/header/slider-controls'
 
 const Carousel: React.FC<{ items: Array<{ title: string; content: string; subLink: { href: string; label: string } }> }> = ({ items }) => {
   const { currentIndex, setCurrentIndex, nextItem, prevItem, setIsHovered } = useAutoSwipe(items.length);

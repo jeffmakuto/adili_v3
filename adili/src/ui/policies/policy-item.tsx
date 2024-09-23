@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { PolicyItemProps } from '@/types/policies';
-import { heading, paragraph } from '@/styles/values';
+import Image from 'next/image'
+import Link from 'next/link'
+import { PolicyItemProps } from '@/types/policies'
+import { heading, paragraph } from '@/styles/values'
 
 const SIGN_INTEGRITY_CODE = process.env.NEXT_PUBLIC_SIGN_INTEGRITY_CODE || "#";
 
