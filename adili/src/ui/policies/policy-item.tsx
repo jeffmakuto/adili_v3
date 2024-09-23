@@ -21,6 +21,9 @@ const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: bo
                     alt={`${policy.title} Icon`}
                     width={200}
                     height={200}
+                    style={{ width: 'auto', height: 'auto' }}
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 30vw, 20vw"
+                    priority
                 />
             </div>
             <h2 className={`${heading} mt-4 sm:mt-0 sm:ml-4 text-left`}>
