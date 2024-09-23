@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { ImageData } from '@/types/slider';
+import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
+import { ImageData } from '@/types/slider'
 
 const ImageSliderView = ({ images, currentIndex }: { images: ImageData[], currentIndex: number }) => {
   const [containerHeight, setContainerHeight] = useState<number>(460); /* Default height */

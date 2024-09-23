@@ -1,6 +1,6 @@
-import MessageFromCEO from '@/ui/policies/message-from-ceo';
-import EthicsPrinciples from '@/ui/policies/ethics-principles';
-import PoliciesView from '@/ui/policies/policies-view';
+import MessageFromCEO from '@/ui/policies/message-from-ceo'
+import EthicsPrinciples from '@/ui/policies/ethics-principles'
+import PoliciesView from '@/ui/policies/policies-view'
 
 const Policies: React.FC = () => {
   return (
