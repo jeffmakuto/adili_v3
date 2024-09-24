@@ -44,3 +44,18 @@ export type PolicyItemProps = {
     onToggle: (index: number) => void;
 }
   
+export type HeroImageProps = {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+}
+
+
+export type DeclarationProps = {
+    declarationLink: string;
+}
+
+export type DeclarationButtonProps = {
+    link: string;
+}
