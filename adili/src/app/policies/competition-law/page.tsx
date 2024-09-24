@@ -33,7 +33,7 @@ const EthicalMarketing: React.FC = () => {
                 <div className="flex justify-center py-2 mb-4 md:mt-20 shadow-lg rounded-lg">
                     {renderHeroImage("/images/competition-law1.jpg", "Ethical Marketing Anime")}
                 </div>
-                <div className="flex flex-col justify-center mt-4 md:mt-4 lg:mt-18 p-4 hover:scale-105">
+                <div className="flex flex-col justify-center mt-4 md:mt-4 lg:mt-20 p-4 hover:scale-105">
                     <div>
                         <Guidelines />
                     </div>
