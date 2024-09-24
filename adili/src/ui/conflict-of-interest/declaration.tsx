@@ -21,7 +21,7 @@ const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
                     To declare any conflicts of interest, please fill out the declaration form.
                 </p>
             </div>
-            <div className="mt-8">
+            <div className="mt-16">
                 <DeclarationButton link={declarationLink} />
             </div>
         </div>
