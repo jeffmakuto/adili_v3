@@ -6,7 +6,7 @@ import DeclarationGuidelines from '@/ui/gifts-and-entertainment/declaration-guid
 import AcceptanceGuidelines from '@/ui/gifts-and-entertainment/acceptance-guidelines'
 import ImportantNotes from '@/ui/gifts-and-entertainment/important-notes'
 
-const ConflictOfInterest: React.FC = () => {
+const GiftsAndEntertainment: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -48,4 +48,4 @@ const ConflictOfInterest: React.FC = () => {
     );
 };
 
-export default ConflictOfInterest;
+export default GiftsAndEntertainment;

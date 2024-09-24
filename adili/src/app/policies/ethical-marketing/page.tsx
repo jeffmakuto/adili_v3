@@ -2,13 +2,10 @@
 
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
 import Header from '@/ui/ethical-marketing/header'
-import DeclarationGuidelines from '@/ui/gifts-and-entertainment/declaration-guidelines'
-import AcceptanceGuidelines from '@/ui/gifts-and-entertainment/acceptance-guidelines'
-import ImportantNotes from '@/ui/gifts-and-entertainment/important-notes'
 import GuidelinesForMarketingPromotions from '@/ui/ethical-marketing/guidelines'
 import SponsorshipPolicy from '@/ui/ethical-marketing/sponsorship'
 
-const ConflictOfInterest: React.FC = () => {
+const EthicalMarketing: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -47,4 +44,4 @@ const ConflictOfInterest: React.FC = () => {
     );
 };
 
-export default ConflictOfInterest;
+export default EthicalMarketing;
