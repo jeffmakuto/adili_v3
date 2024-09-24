@@ -26,7 +26,7 @@ const ConflictOfInterest: React.FC = () => {
                     <div>
                         <Header />
                     </div>
-                    <div className="mt-16 hover:scale-105">
+                    <div className="mt-12 lg:mt-20 hover:scale-105">
                         <UnderstandingConflictOfInterest />
                     </div>
                 </div>
@@ -37,7 +37,7 @@ const ConflictOfInterest: React.FC = () => {
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
                     {renderHeroImage("/images/conflict-of-interest.jpg", "Conflict of Interest Image")}
                 </div>
-                <div className="flex flex-col justify-center p-4">
+                <div className="flex flex-col justify-center mt-4 lg:mt-8 p-4">
                     <div>
                         <Guidelines />
                     </div>
