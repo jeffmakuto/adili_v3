@@ -5,7 +5,7 @@ const UnderstandingConflictOfInterest: React.FC = () => {
     return (
         <div className="bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6 rounded shadow-md">
             <div className="flex items-center">
-                <FaClipboardCheck className="text-red-600 mr-2" size={24} aria-label="Understanding Conflict of Interest Icon" />
+                <FaClipboardCheck className="text-red-600 mr-2 mt-4" size={24} aria-label="Understanding Conflict of Interest Icon" />
                 <h2 className={heading}>Understanding Conflict of Interest</h2>
             </div>
             <p className={paragraph}>
