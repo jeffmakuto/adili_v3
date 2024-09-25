@@ -29,7 +29,7 @@ const CompanyAssets: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 md:mt-2 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/company-assets.JPG", "Comapny Assets Sketch")}
+                    {renderHeroImage("/images/company-assets.JPG", "Company Assets Sketch Image")}
                 </div>
                 <div className="flex flex-col justify-center mt-4 md:mt-4 p-4">
                     <div>
