@@ -1,11 +1,9 @@
-'use client'
-
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
-import Header from '@/ui/ethical-marketing/header'
+import Header from '@/ui/preventing-crimes/header'
 import DueDiligenceResponsibilities from '@/ui/preventing-crimes/dilligence'
 import NoSupportForIllegalActivities from '@/ui/preventing-crimes/illegal'
 
-const EthicalMarketing: React.FC = () => {
+const PreventingCriminalFinancingActivities: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -16,7 +14,7 @@ const EthicalMarketing: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/preventing-crimes.JPG", "Ethical Marketing Crew Image")}
+                    {renderHeroImage("/images/preventing-crimes.JPG", "Ground Agent Image")}
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
@@ -31,9 +29,9 @@ const EthicalMarketing: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/preventing-crimes1.jpg", "Ethical Marketing Anime")}
+                    {renderHeroImage("/images/preventing-crimes1.jpg", "Preventing Criminal Financing Activities Sketch Image")}
                 </div>
-                <div className="flex flex-col justify-center mt-12 lg:mt-24 p-4 hover:scale-105">
+                <div className="flex flex-col justify-center mt-12 lg:mt-24 p-4">
                     <div>
                         <DueDiligenceResponsibilities />
                     </div>
@@ -44,4 +42,4 @@ const EthicalMarketing: React.FC = () => {
     );
 };
 
-export default EthicalMarketing;
+export default PreventingCriminalFinancingActivities;
