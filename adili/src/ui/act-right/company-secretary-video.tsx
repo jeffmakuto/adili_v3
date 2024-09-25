@@ -1,6 +1,6 @@
 import { CEOVideoProps } from '@/types/policies'
 
-const HabilsVideo: React.FC<CEOVideoProps> = ({ className }) => {
+const CompanySecretaryVideo: React.FC<CEOVideoProps> = ({ className }) => {
   return (
     <video className={className} controls preload="none">
       <source src="/videos/Trial.mp4" type="video/mp4" />
@@ -15,4 +15,4 @@ const HabilsVideo: React.FC<CEOVideoProps> = ({ className }) => {
   );
 }
 
-export default HabilsVideo;
+export default CompanySecretaryVideo;

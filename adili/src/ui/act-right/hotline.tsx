@@ -1,5 +1,5 @@
 import { heading, paragraph } from '@/styles/values'
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt } from 'react-icons/fa'
 
 const Hotline: React.FC = () => {
     return (
@@ -7,7 +7,7 @@ const Hotline: React.FC = () => {
             <h2 className={`flex items-center mb-2 ${heading}`}>
                 <FaPhoneAlt
                     className="mr-2 mt-2 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
-                    aria-label="Conflict of Interest Icon"
+                    aria-label="Reporting Hotline Icon"
                 />
                 Reporting Hotline
             </h2>

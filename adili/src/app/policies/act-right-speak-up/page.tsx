@@ -1,12 +1,10 @@
-'use client'
-
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
 import Header from '@/ui/act-right/header'
 import Commitment from '@/ui/act-right/commitment'
 import Hotline from '@/ui/act-right/hotline'
-import HabilsMessage from '@/ui/act-right/habils-message'
+import CompanySecretaryMessage from '@/ui/act-right/company-secretary-message'
 
-const EthicalMarketing: React.FC = () => {
+const ActRightSpeakUp: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -17,7 +15,7 @@ const EthicalMarketing: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    <HabilsMessage />
+                    <CompanySecretaryMessage />
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
@@ -32,7 +30,7 @@ const EthicalMarketing: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 md:mt-20 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/act-right.jpg", "Gifts and Entertainment Anime")}
+                    {renderHeroImage("/images/act-right.jpg", "Act Right Speak Up Sketch Image")}
                 </div>
                 <div className="flex flex-col justify-center mt-8 md:mt-20 p-4">
                     <div>
@@ -45,4 +43,4 @@ const EthicalMarketing: React.FC = () => {
     );
 };
 
-export default EthicalMarketing;
+export default ActRightSpeakUp;

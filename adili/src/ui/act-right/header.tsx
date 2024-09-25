@@ -1,5 +1,3 @@
-'use client'
-
 import { FaVolumeUp } from 'react-icons/fa'
 
 const Header: React.FC = () => {
@@ -8,7 +6,7 @@ const Header: React.FC = () => {
             <h1 className="flex items-center text-xl md:text-2xl lg:text-4xl text-red-600 font-black mb-2">
                 <FaVolumeUp
                     className="mr-2 mt-2 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
-                    aria-label="Conflict of Interest Icon"
+                    aria-label="Act Right, Speak Up Principle Icon"
                 />
                 Act Right, Speak Up Principle
             </h1>
