@@ -12,8 +12,9 @@ const ComplianceWithPolicies: React.FC = () => {
                 <h2 className={heading}>Compliance with Policies</h2>
             </div>
             <p className={paragraph}>
-                We must all comply to the KQ information security policies and data protection 
-                policies to guide you on how to handle information.
+                We must all comply to the <strong>KQ Information Security Policies</strong> 
+                and <strong>Data Protection Policies</strong> to guide you on how to handle 
+                information.
             </p>
         </div>
     );
