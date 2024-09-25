@@ -3,7 +3,7 @@ import Header from '@/ui/external-activities/header'
 import CommunicationGuidelines from '@/ui/external-activities/guidelines'
 import RespectingEmployeeRights from '@/ui/external-activities/rights'
 
-const EthicalMarketing: React.FC = () => {
+const ExternalActivities: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -42,4 +42,4 @@ const EthicalMarketing: React.FC = () => {
     );
 };
 
-export default EthicalMarketing;
+export default ExternalActivities;
