@@ -1,5 +1,3 @@
-'use client'
-
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
 import Header from '@/ui/external-activities/header'
 import CommunicationGuidelines from '@/ui/external-activities/guidelines'
@@ -16,7 +14,7 @@ const EthicalMarketing: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/external-activities.jpg", "Ethical Marketing Crew Image")}
+                    {renderHeroImage("/images/external-activities.jpg", "Focused Employee Image")}
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
@@ -31,9 +29,9 @@ const EthicalMarketing: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 md:mt-16 lg:mt-28 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/external-activities.webp", "Ethical Marketing Anime")}
+                    {renderHeroImage("/images/external-activities.webp", "External Activities Sketch Image")}
                 </div>
-                <div className="flex flex-col justify-center mt-12 md:mt-20 lg:mt-32 p-4 hover:scale-105">
+                <div className="flex flex-col justify-center mt-12 md:mt-20 lg:mt-32 p-4">
                     <div>
                         <RespectingEmployeeRights />
                     </div>
