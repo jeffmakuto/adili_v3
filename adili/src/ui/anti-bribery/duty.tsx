@@ -7,7 +7,7 @@ const Duty: React.FC = () => {
             <div className="flex items-center">
                 <FaHandHoldingUsd
                     className="mr-2 mt-4 w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
-                    aria-label="Understanding Conflict of Interest Icon"
+                    aria-label="Duty to Prevent Corruption Icon"
                 />
                 <h2 className={heading}>Duty to Prevent Corruption</h2>
             </div>

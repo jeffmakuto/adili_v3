@@ -1,12 +1,10 @@
-'use client'
-
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
 import Header from '@/ui/anti-bribery/header'
 import Obligations from '@/ui/anti-bribery/obligations'
 import Impact from '@/ui/anti-bribery/impact'
 import Duty from '@/ui/anti-bribery/duty'
 
-const GiftsAndEntertainment: React.FC = () => {
+const AntiBriberyAndAntiCorruption: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -17,7 +15,7 @@ const GiftsAndEntertainment: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/anti-bribery.JPG", "Gifts and Entertainment Crew Image")}
+                    {renderHeroImage("/images/anti-bribery.JPG", "Four Cabin Crews Image")}
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
@@ -32,7 +30,7 @@ const GiftsAndEntertainment: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 md:mt-20 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/anti-bribery1.jpg", "Gifts and Entertainment Anime")}
+                    {renderHeroImage("/images/anti-bribery1.jpg", "Anti-Bribery and Anti-Corruption Sketch Image")}
                 </div>
                 <div className="flex flex-col justify-center mt-12 md:mt-16 lg:mt-40 p-4">
                     <div>
@@ -48,4 +46,4 @@ const GiftsAndEntertainment: React.FC = () => {
     );
 };
 
-export default GiftsAndEntertainment;
+export default AntiBriberyAndAntiCorruption;

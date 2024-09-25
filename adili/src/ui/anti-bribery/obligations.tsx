@@ -7,7 +7,7 @@ const Obligations: React.FC = () => {
             <div className="flex items-center">
                 <FaRegFlag
                     className="mr-2 mt-4 w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
-                    aria-label="Understanding Conflict of Interest Icon"
+                    aria-label="Reporting Obligations Icon"
                 />
                 <h2 className={heading}>Reporting Obligations</h2>
             </div>
