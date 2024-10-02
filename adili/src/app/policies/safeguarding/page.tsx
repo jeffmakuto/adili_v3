@@ -2,12 +2,10 @@
 
 import HeroImage from '@/ui/conflict-of-interest/hero-image'
 import Header from '@/ui/safeguarding/header'
-import GuidelinesForMarketingPromotions from '@/ui/ethical-marketing/guidelines'
-import SponsorshipPolicy from '@/ui/ethical-marketing/sponsorship'
 import ZeroTolerancePolicy from '@/ui/safeguarding/zero-tolerance'
 import Commitment from '@/ui/safeguarding/commitment'
 
-const EthicalMarketing: React.FC = () => {
+const Safeguarding: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -33,7 +31,7 @@ const EthicalMarketing: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/safeguarding1.jpg", "Ethical Marketing Anime")}
+                    {renderHeroImage("/images/safeguarding1.jpg", "Safeguarding Sketch Image")}
                 </div>
                 <div className="flex flex-col justify-center mt-4 lg:mt-4 p-4 hover:scale-105">
                     <div>
@@ -46,4 +44,4 @@ const EthicalMarketing: React.FC = () => {
     );
 };
 
-export default EthicalMarketing;
+export default Safeguarding;
