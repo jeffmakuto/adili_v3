@@ -18,7 +18,7 @@ const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
                     Declaration
                 </h2>
                 <p className={`${paragraph} mb-4`}>
-                    To declare any gifts, please fill out the declaration form.
+                    To declare any gifts and entertainment, please fill out the declaration form.
                 </p>
             </div>
             <div className="mt-16">
