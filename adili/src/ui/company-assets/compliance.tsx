@@ -2,6 +2,10 @@ import { FaFileContract } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
 const ComplianceWithPolicies: React.FC = () => {
+    const acceptableUsePolicyUrl = process.env.NEXT_PUBLIC_ACCEPTABLE_USE_POLICY_URL || '#';
+    const infoSecurityPolicyUrl = process.env.NEXT_PUBLIC_INFO_SECURITY_POLICY_URL || '#';
+    const dataProtectionPolicyUrl = process.env.NEXT_PUBLIC_DATA_PROTECTION_POLICY_URL || '#';
+
     return (
         <div className="p-4 mb-6">
             <div className="flex items-center">
@@ -12,9 +16,31 @@ const ComplianceWithPolicies: React.FC = () => {
                 <h2 className={heading}>Compliance with Policies</h2>
             </div>
             <p className={paragraph}>
-                We must all comply to the <strong>KQ Information Security Policies </strong> 
-                and <strong>Data Protection Policies</strong> to guide you on how to handle 
-                information.
+                We must all comply with the&nbsp;
+                <a 
+                    href={acceptableUsePolicyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-red-600 underline"
+                >
+                    Acceptable Use Policy
+                </a>, the&nbsp;
+                <a 
+                    href={infoSecurityPolicyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-red-600 underline"
+                >
+                    Information Security Policy
+                </a>, and the&nbsp;
+                <a 
+                    href={dataProtectionPolicyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-red-600 underline"
+                >
+                    Data Protection Policy
+                </a>&nbsp;to guide you on how to handle information.
             </p>
         </div>
     );
