@@ -5,6 +5,9 @@ import Header from '@/ui/gifts-and-entertainment/header'
 import DeclarationGuidelines from '@/ui/gifts-and-entertainment/declaration-guidelines'
 import AcceptanceGuidelines from '@/ui/gifts-and-entertainment/acceptance-guidelines'
 import ImportantNotes from '@/ui/gifts-and-entertainment/important-notes'
+import Declaration from '@/ui/gifts-and-entertainment/declaration'
+
+const GIFTS = process.env.NEXT_PUBLIC_GIFTS || "#";
 
 const GiftsAndEntertainment: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
@@ -43,6 +46,9 @@ const GiftsAndEntertainment: React.FC = () => {
                     </div>
                 </div>
             </section>
+            </div>
+            <div className="flex justify-start sm:mt-0 md:mt-2 lg:mt-4 px-2">
+                    <Declaration declarationLink={GIFTS} />
             </div>
         </main>
     );
