@@ -1,5 +1,6 @@
 import { heading, paragraph } from '@/styles/values'
 import { FaPhoneAlt } from 'react-icons/fa'
+import EthicsHotlineImage from '@/ui/act-right/image'
 
 const Hotline: React.FC = () => {
     return (
@@ -20,6 +21,9 @@ const Hotline: React.FC = () => {
                 <li className="text-red-600">Independent</li>
                 <li>Protected from retaliation</li>
             </ul>
+            <div className="mt-12">
+                <EthicsHotlineImage />
+            </div>
         </>
     );
 };
