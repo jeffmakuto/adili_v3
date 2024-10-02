@@ -2,8 +2,10 @@ import { FaHandshake } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
 const SponsorshipPolicy: React.FC = () => {
+    const sponsorshipPolicyUrl = process.env.NEXT_PUBLIC_SPONSORSHIP_POLICY_URL || '#';
+
     return (
-        <div className="bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6 rounded-lg shadow-lg">
+        <div className="p-4 mb-6">
             <div className="flex items-center">
                 <FaHandshake
                     className="mr-2 mt-4 w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
@@ -12,7 +14,8 @@ const SponsorshipPolicy: React.FC = () => {
                 <h2 className={heading}>Sponsorship Policy</h2>
             </div>
             <p className={paragraph}>
-                The sponsorship policy offers further guidance on how to go about this ethically.
+                The <a href={sponsorshipPolicyUrl} target="_blank" rel="noopener noreferrer" className="text-red-600 underline">sponsorship policy</a> offers 
+                further guidance on how to go about this ethically.
             </p>
         </div>
     );
