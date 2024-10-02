@@ -5,7 +5,7 @@ import Header from '@/ui/competition-law/header'
 import CommitmentToFairCompetition from '@/ui/competition-law/commitment'
 import Guidelines from '@/ui/competition-law/guidelines'
 
-const EthicalMarketing: React.FC = () => {
+const CompetitionLaw: React.FC = () => {
     const renderHeroImage = (src: string, alt: string) => (
         <HeroImage src={src} alt={alt} width={800} height={600} />
     );
@@ -16,7 +16,7 @@ const EthicalMarketing: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/competition-law.jpg", "Safeguarding Crew Image")}
+                    {renderHeroImage("/images/competition-law.jpg", "Competition Law Crew Image")}
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
@@ -31,7 +31,7 @@ const EthicalMarketing: React.FC = () => {
             {/* Second Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 md:mt-20 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/competition-law1.jpg", "Ethical Marketing Anime")}
+                    {renderHeroImage("/images/competition-law1.jpg", "Competition Law Sketch Image")}
                 </div>
                 <div className="flex flex-col justify-center mt-4 md:mt-4 lg:mt-20 p-4 hover:scale-105">
                     <div>
@@ -44,4 +44,4 @@ const EthicalMarketing: React.FC = () => {
     );
 };
 
-export default EthicalMarketing;
+export default CompetitionLaw;

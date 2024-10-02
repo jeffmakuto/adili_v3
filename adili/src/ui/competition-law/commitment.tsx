@@ -7,7 +7,7 @@ const CommitmentToFairCompetition: React.FC = () => {
             <div className="flex items-center">
                 <FaGavel
                     className="mr-2 mt-4 w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
-                    aria-label="Understanding Conflict of Interest Icon"
+                    aria-label="Commitment to Fair Competition Icon"
                 />
                 <h2 className={heading}>Commitment to Fair Competition</h2>
             </div>
