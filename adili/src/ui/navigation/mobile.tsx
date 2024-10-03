@@ -47,7 +47,7 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
                 ))}
               </div>
               <div className="flex justify-center mb-4">
-                <QRCode />
+                <QRCode width={205} height={205} />
               </div>
               <p className="text-center text-sm text-gray-700">
                   Scan the QR code above to report any issue
