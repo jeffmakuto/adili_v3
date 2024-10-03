@@ -8,7 +8,7 @@ interface Message {
 
 /* Custom hook to handle messages, input logic */
 export function useChat() {
-  // Start with an empty array to show default content initially
+  /* Start with an empty array to show default content initially */
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
 

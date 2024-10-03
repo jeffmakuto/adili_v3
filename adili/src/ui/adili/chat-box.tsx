@@ -12,7 +12,7 @@ const ChatBox: React.FC = () => {
   return (
     <div className="flex flex-col h-full rounded-lg shadow-md">
       <Header />
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50 space-y-4">
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50 space-y-4 min-h-[500px]">
         {messages.length === 0 ? <DefaultContent /> : messages.map((msg, index) => (
           <MessageBubble key={index} text={msg.text} sender={msg.sender} timestamp={msg.timestamp.getTime()} />
         ))}
