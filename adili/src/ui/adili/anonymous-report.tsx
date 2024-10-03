@@ -17,7 +17,7 @@ const ReportAnonymously: React.FC = () => {
         </a>
         <span className="text-gray-700 ml-2">or scan the QR Code</span>
       </div>
-      <div className="ml-4">
+      <div className="ml-4 md:hidden">
         <QRCode width={100} height={100} />
       </div>
     </div>
