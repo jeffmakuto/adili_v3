@@ -19,4 +19,3 @@ export type MessageBubbleProps = {
 export type HeaderProps = {
     status?: string;
 }
-  

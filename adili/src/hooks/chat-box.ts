@@ -1,10 +1,5 @@
 import { useState } from 'react'
-
-interface Message {
-  text: string;
-  sender: string;
-  timestamp: Date;
-}
+import { Message } from '@/types/chat'
 
 /* Custom hook to handle messages, input logic */
 export function useChat() {
