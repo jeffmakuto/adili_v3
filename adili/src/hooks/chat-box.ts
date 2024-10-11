@@ -32,3 +32,14 @@ export function useChat() {
     handleInputChange,
   };
 }
+
+
+export function useChatToggle () {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen(prevState => !prevState);
+  };
+
+  return { isChatOpen, toggleChat };
+};

@@ -13,13 +13,8 @@ const DefaultContent: React.FC = () => (
       />
     </div>
     <div className="flex flex-col items-center justify-center">
-      <p className="text-gray-700">Welcome! How can I assist you today?</p>
+      <p className="text-gray-700">Welcome. How can I assist you today?</p>
       <p className="text-gray-700">Feel free to ask me anything.</p>
-    </div>
-    
-    {/* Container for Scrolling Message */}
-    <div className="col-span-full mt-4 flex-grow flex items-end overflow-hidden">
-      <ScrollingMessage />
     </div>
   </div>
 );
