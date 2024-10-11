@@ -38,15 +38,7 @@ const links: LinkType[] = [
   },
   { href: '/case-studies', label: 'Case Studies', icon: faBriefcase, isActive: false },
   { href: '/our-ambassadors', label: 'Our Ambassadors', icon: faBullhorn, isActive: false },
-  { 
-    href: '/adili-chat',
-    label: 'Adili',
-    icon: faComments,
-    isActive: false,
-    subNavLinks: [
-      { href: '/adili-chat/chat', label: 'Chat Interface' },
-    ]
-  }
+  { href: '/adili-chat', label: 'Adili', icon: faComments, isActive: false },
 ];
 
 const Nav: React.FC = () => (

@@ -5,6 +5,7 @@ import GlobalError from '@/errors/global-error'
 import { ErrorBoundary } from 'react-error-boundary'
 import Header from '@/ui/header/header'
 import Footer from '@/ui/footer/footer'
+import FloatingChatButton from '@/ui/adili/chat/floating-chat'
 
 const robotoFlex = Roboto_Flex({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <ErrorBoundary FallbackComponent={GlobalError}>
           <Header />
           <main>{children}</main>
+          <FloatingChatButton />
           <Footer />
         </ErrorBoundary>
       </body>
