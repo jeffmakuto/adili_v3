@@ -8,8 +8,6 @@ export type UseSendOnEnterProps = {
 
 export type InputFieldProps = {
     value: string;
-    title: string;
     onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onSend: () => void;
-    onTitleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
