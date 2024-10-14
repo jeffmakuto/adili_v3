@@ -27,7 +27,7 @@ const FloatingChatButton: React.FC = () => {
           {/* Chat Header with Close Button */}
           <div className="flex items-center justify-between p-4">
             <div className="flex-1 text-center">
-              <h1 className={heading}>Ethics & Integrity</h1>
+              <h1 className="text-xl md:text-2xl lg:text-4xl text-red-600 font-bold">Ethics & Integrity</h1>
             </div>
             <button onClick={toggleChat} className="p-2 rounded-full bg-red-600 transition">
               <FaTimes size={20} />
