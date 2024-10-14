@@ -28,7 +28,7 @@ const FloatingChatButton: React.FC = () => {
             <div className="flex-1 text-center">
               <h1 className="text-xl md:text-2xl lg:text-4xl text-red-600 font-bold">Ethics & Integrity</h1>
             </div>
-            <button onClick={toggleChat} className="p-2 rounded-full bg-red-600 transition">
+            <button onClick={toggleChat} className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
               <FaTimes size={20} />
             </button>
           </div>
