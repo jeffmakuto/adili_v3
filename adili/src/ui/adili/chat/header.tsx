@@ -1,14 +1,13 @@
-import { heading } from "@/styles/values";
+import { useOnlineStatus } from '@/hooks/use-online-status'
+import { heading } from '@/styles/values'
 
-interface HeaderProps {
-  status?: string;
-}
+const Header: React.FC = () => {
+  const isOnline = useOnlineStatus();
 
-const Header: React.FC<HeaderProps> = ({ status = 'Online' }) => {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-100 text-white rounded-t-md shadow-md">
-      <div className={heading}>Adili Chat</div>
-      <div className={heading}>{status}</div>
+    <header className="flex items-center justify-between px-10 bg-gray-100 text-gray-800 rounded-t-md shadow-md">
+      <div className={heading}>Adili</div>
+      <div className={heading}>{isOnline ? 'Online' : 'Offline'}</div>
     </header>
   );
 };

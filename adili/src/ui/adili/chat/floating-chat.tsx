@@ -3,6 +3,7 @@
 import { FaComments, FaTimes } from 'react-icons/fa'
 import ChatBox from '@/ui/adili/chat-box'
 import { useChatToggle } from '@/hooks/chat-box'
+import { heading } from '@/styles/values'
 
 const FloatingChatButton: React.FC = () => {
   const { isChatOpen, toggleChat } = useChatToggle();
@@ -25,7 +26,9 @@ const FloatingChatButton: React.FC = () => {
         <div className="fixed inset-0 z-50 bg-white shadow-lg flex flex-col">
           {/* Chat Header with Close Button */}
           <div className="flex items-center justify-between p-4">
-            <div className="flex-grow"></div>
+            <div className="flex-1 text-center">
+              <h1 className={heading}>Ethics & Integrity</h1>
+            </div>
             <button onClick={toggleChat} className="p-2 rounded-full bg-red-600 transition">
               <FaTimes size={20} />
             </button>
