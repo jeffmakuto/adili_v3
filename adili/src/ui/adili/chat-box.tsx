@@ -1,22 +1,19 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useChat } from '@/hooks/chat-box'
 import Header from '@/ui/adili/chat/header'
 import MessageBubble from '@/ui/adili/chat/message-bubble'
 import InputField from '@/ui/adili/chat/input-field'
 import DefaultContent from '@/ui/adili/chat/default-content'
+import useScrollToBottom from '@/hooks/use-scroll-to-bottom'
 
 const ChatBox: React.FC = () => {
   const { messages, inputValue, handleSend, handleInputChange } = useChat();
   const messageEndRef = useRef<HTMLDivElement | null>(null);
 
   /* Scroll to the bottom of the chat whenever new messages arrive */
-  useEffect(() => {
-    if (messageEndRef.current) {
-      messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages]);
+  useScrollToBottom(messages, messageEndRef);
 
   return (
     <div className="flex flex-col h-full rounded-lg shadow-md">
