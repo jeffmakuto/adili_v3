@@ -3,7 +3,6 @@
 import { FaComments, FaTimes } from 'react-icons/fa'
 import ChatBox from '@/ui/adili/chat-box'
 import { useChatToggle } from '@/hooks/chat-box'
-import { heading } from '@/styles/values'
 
 const FloatingChatButton: React.FC = () => {
   const { isChatOpen, toggleChat } = useChatToggle();
