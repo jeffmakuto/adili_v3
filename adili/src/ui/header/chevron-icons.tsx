@@ -68,7 +68,7 @@ export const RedTriangleRightIcon: React.FC<IconProps> = ({ className }) => (
   </svg>
 );
 
-export const ChevronDownIcon: React.FC<ChevronDownIconProps> = ({ className, isActive }) => (
+export const TriangleDownIcon: React.FC<ChevronDownIconProps> = ({ className, isActive }) => (
   <svg
     aria-hidden="true"
     focusable="false"
