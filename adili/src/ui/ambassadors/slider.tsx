@@ -1,7 +1,7 @@
 'use client'
 
 import ImageSliderView from '@/ui/header/image-slider-view'
-import { SliderControls, SliderDots } from '@/ui/header/slider-controls'
+import { RedSliderControls, SliderDots } from '@/ui/header/slider-controls'
 import useAutoSwipe from '@/hooks/auto-swipe'
 import { images } from '@/data/bulletins'
 
@@ -21,7 +21,7 @@ export default function ImageSlider(): JSX.Element {
       onMouseLeave={() => setIsHovered(false)}
     >
       <ImageSliderView images={images} currentIndex={currentIndex} />
-      <SliderControls 
+      <RedSliderControls 
         prevSlide={prevItem}
         nextSlide={nextItem}
       />

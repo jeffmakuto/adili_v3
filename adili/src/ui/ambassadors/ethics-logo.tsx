@@ -7,8 +7,8 @@ const EthicsLogo: React.FC = () => {
       <Image
         src="/images/logo.png"
         alt="Ethics Logo"
-        width={800}
-        height={600}
+        width={460}
+        height={301}
         style={{ objectFit: 'cover' }}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority
