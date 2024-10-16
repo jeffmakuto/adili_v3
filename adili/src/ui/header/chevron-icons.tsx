@@ -36,6 +36,38 @@ export const ChevronRightIcon: React.FC<IconProps> = ({ className }) => (
   </svg>
 );
 
+export const RedTriangleLeftIcon: React.FC<IconProps> = ({ className }) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fas"
+    data-icon="triangle-left"
+    className={className}
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
+    style={{ transform: 'scale(1.2)' }}
+  >
+    <path fill="red" d="M0 256l160 160V96z" />
+  </svg>
+);
+
+export const RedTriangleRightIcon: React.FC<IconProps> = ({ className }) => (
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fas"
+    data-icon="triangle-right"
+    className={className}
+    role="img"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 512"
+    style={{ transform: 'scale(1.2)' }}
+  >
+    <path fill="red" d="M320 256L160 96v320z" />
+  </svg>
+);
+
 export const ChevronDownIcon: React.FC<ChevronDownIconProps> = ({ className, isActive }) => (
   <svg
     aria-hidden="true"

@@ -1,5 +1,5 @@
 import { SliderControlsProps, SliderDotsProps } from '@/types/slider'
-import { ChevronLeftIcon, ChevronRightIcon } from '@/ui/header/chevron-icons'
+import { ChevronLeftIcon, ChevronRightIcon, RedTriangleLeftIcon, RedTriangleRightIcon } from '@/ui/header/chevron-icons'
 
 export const SliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextSlide }) => {
   return (
@@ -19,6 +19,27 @@ export const SliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextS
         onClick={nextSlide}
       >
         <ChevronRightIcon />
+      </button>
+    </>
+  );
+};
+
+export const RedSliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextSlide }) => {
+  return (
+    <>
+      <button
+        aria-label="Previous Slide"
+        className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center transition duration-200"
+        onClick={prevSlide}
+      >
+        <RedTriangleLeftIcon className="h-6 w-6 lg:w-8 lg:h-8" />
+      </button>
+      <button
+        aria-label="Next Slide"
+        className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 flex items-center justify-center transition duration-200"
+        onClick={nextSlide}
+      >
+        <RedTriangleRightIcon className="h-6 w-6 lg:w-8 lg:h-8" />
       </button>
     </>
   );
