@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp, IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import Link from 'next/link'
-import { ChevronDownIcon } from '@/ui/header/chevron-icons'
+import { TriangleDownIcon } from '@/ui/header/chevron-icons'
 import { NavItemProps } from '@/types/link'
 import { getItemClass, getIconClass, getLinkClass, getDropdownClass, getSubNavLinkClass } from '@/styles/nav-item-styles'
 import useNavItem from '@/hooks/use-nav-item'
@@ -24,7 +24,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick,
             {label}
           </span>
           {subNavLinks && (
-            <ChevronDownIcon className="w-4 h-4" isActive={isActive} />
+            <TriangleDownIcon className="w-4 h-4" isActive={isActive} />
           )}
         </div>
       </Link>
