@@ -1,23 +1,25 @@
 import Header from '@/ui/ambassadors/header'
 import EthicsLogo from '@/ui/ambassadors/ethics-logo'
 import Bulletins from '@/ui/ambassadors/bulletins'
+import VideoCarousel from '@/ui/ambassadors/video-carousel'
 
 const Ambassadors: React.FC = () => {
   return (
     <main className="flex flex-col min-h-screen px-4 md:px-8 mt-8">
-      <Header />
+      <div>
+        <Header />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex items-center justify-center mt-8">
+        <div className="shadow-lg mt-8 md:mb-8">
           <EthicsLogo />
+          <VideoCarousel />
         </div>
-        <div className="shadow-lg">
+        <div className="mb-8">
           <Bulletins />
         </div>
       </div>
-      <div className="flex-1 mt-16 p-4">
-      </div>
     </main>
   );
-}
+};
 
 export default Ambassadors;
