@@ -3,7 +3,7 @@ import { CEOVideoProps } from '@/types/policies'
 const ExplainerVideo: React.FC<CEOVideoProps> = ({ className }) => {
   return (
     <div>
-      <video className={className} controls preload="none">
+      <video className={className} controls preload="none" muted>
         <source src="/videos/Trial.mp4" type="video/mp4" />
         <track
           src="/videos/Trial.vtt"
