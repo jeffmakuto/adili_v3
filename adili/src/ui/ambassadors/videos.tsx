@@ -5,7 +5,7 @@ const Video: React.FC<AmbassadorVideoProps & { isActive: boolean }> = ({ classNa
   const videoRef = useVideo(isActive);
 
   return (
-    <video ref={videoRef} className={className} controls preload="none">
+    <video ref={videoRef} className={className} controls preload="none" muted>
       <source src={videoSrc} type="video/mp4" />
       <track
         src={`${videoSrc.replace('.mp4', '.vtt')}`}
