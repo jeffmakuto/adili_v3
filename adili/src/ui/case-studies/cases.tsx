@@ -3,6 +3,7 @@ import Case1 from '@/ui/case-studies/case1/case'
 import Case2 from '@/ui/case-studies/case2/case'
 import Case3 from '@/ui/case-studies/case3/case'
 import Case4 from '@/ui/case-studies/case4/case'
+import Dilemma from '@/ui/case-studies/dilemma'
 
 const Cases: React.FC = () => {
 	return (
@@ -13,6 +14,9 @@ const Cases: React.FC = () => {
 			<div className="flex justify-center items-center mt-6">
 				<div className="w-full max-w-4xl">
 					<Carousel>
+						<div className="mt-10 mb-8 md:mb-16 lg:mb-8">
+							<Dilemma />
+						</div>
 						<Case1 />
 						<Case2 />
 						<Case3 />
