@@ -30,3 +30,11 @@ export type MenuToggleButtonProps = {
   onClick: () => void;
   isOpen: boolean;
 }
+
+export type AnimateMenuProps = {
+  isOpen: boolean;
+  closeMenu: () => void;
+  menuRef: React.RefObject<HTMLDivElement>;
+  className: string;
+  children: React.ReactNode;
+}
