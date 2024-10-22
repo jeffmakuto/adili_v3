@@ -1,12 +1,5 @@
-import { SubNavLink } from '@/types/link'
-import LearnMoreButton from '@/ui/buttons/learn-more'
 import ValuesImage from '@/ui/home/values/values-image'
-import { container, heading, paragraph, buttonWrapper } from '@/styles/values'
-
-const subLink: SubNavLink = {
-  href: '/home/customer-obsession',
-  label: 'Our Mission',
-};
+import { container, heading, paragraph } from '@/styles/values'
 
 const CustomerObsession: React.FC = () => {
   return (
@@ -16,9 +9,6 @@ const CustomerObsession: React.FC = () => {
       <p className={paragraph}>
         I commit to creating positive memorable experiences for our customers.
       </p>
-      <div className={buttonWrapper}>
-        <LearnMoreButton subLink={subLink} />
-      </div>
     </div>
   );
 };
