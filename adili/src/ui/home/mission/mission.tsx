@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import MissionCard from '@/ui/home/mission/mission-card'
 import LearnMoreButton from '@/ui/general/learn-more'
+import { buttonWrapper } from '@/styles/values'
 
 const Mission: React.FC = () => {
   const [isCardOpen, setIsCardOpen] = useState(false);
@@ -34,7 +35,7 @@ const Mission: React.FC = () => {
           </strong>
         </em>
       </p>
-      <div className="flex">
+      <div className={buttonWrapper}>
         <LearnMoreButton onClick={handleLearnMoreClick} />
       </div>
       {isCardOpen && <MissionCard onClose={handleCloseCard} />}

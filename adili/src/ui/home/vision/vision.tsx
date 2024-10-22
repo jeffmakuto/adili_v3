@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import VisionCard from '@/ui/home/vision/vision-card'
 import LearnMoreButton from '@/ui/general/learn-more'
+import { buttonWrapper } from '@/styles/values'
 
 const Vision: React.FC = () => {
   const [isCardOpen, setIsCardOpen] = useState(false);
@@ -32,7 +33,7 @@ const Vision: React.FC = () => {
           </strong>
         </em>
       </p>
-      <div className="flex">
+      <div className={buttonWrapper}>
         <LearnMoreButton onClick={handleLearnMoreClick} />
       </div>
       {isCardOpen && <VisionCard onClose={handleCloseCard} />}
