@@ -4,20 +4,7 @@ import { faHome, faFileAlt, faBriefcase, faBullhorn, faComments } from '@fortawe
 import { LinkType } from '@/types/link'
 
 const links: LinkType[] = [
-  {
-    href: '/',
-    label: 'Home',
-    icon: faHome,
-    isActive: false,
-    subNavLinks: [
-      { href: '/home/mission', label: 'Our Mission' },
-      { href: '/home/vision', label: 'Our Vision' },
-      { href: '/home/safety', label: 'Safety' },
-      { href: '/home/customer-obsession', label: 'Customer Obsession' },
-      { href: '/home/integrity', label: 'Integrity' },
-      { href: '/home/accountability', label: 'Accountability' }
-    ]
-  },
+  { href: '/', label: 'Home', icon: faHome, isActive: false },
   {
     href: '/policies',
     label: 'Policies',
