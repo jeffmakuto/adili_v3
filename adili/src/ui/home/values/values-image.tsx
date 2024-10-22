@@ -3,7 +3,7 @@ import { ValuesImageProps } from '@/types/values'
 
 const ValuesImage: React.FC<ValuesImageProps> = ({ src, alt }) => {
   return (
-    <div className="relative w-full aspect-[1/1]">
+    <div className="relative w-full aspect-[3/2]">
       <Image
         src={src}
         alt={alt}
