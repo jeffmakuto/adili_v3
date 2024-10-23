@@ -13,7 +13,7 @@ const Header: React.FC = () => {
             <p className="text-sm md:text-sm lg:text-lg text-gray-700">
                 We shall not engage in money laundering practices which is the criminal practice of filtering 
                 money which has come from illegal activities through a series of transactions in order 
-                to 'clean' it and give it the appearance of being from legitimate sources.
+                to &apos;clean&apos; it and give it the appearance of being from legitimate sources.
             </p>
         </header>
     );
