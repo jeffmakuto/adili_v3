@@ -1,6 +1,5 @@
 'use client'
 
-import MotionSlider from '@/ui/general/motion-slider'
 import ImageSliderView from '@/ui/header/image-slider-view'
 import { RedSliderControls, SliderDots } from '@/ui/header/slider-controls'
 import useImageSlider from '@/hooks/auto-swipe'
@@ -12,7 +11,6 @@ export default function ImageSlider(): JSX.Element {
     nextItem,
     prevItem,
     setIsHovered,
-    direction,
     handleDotClick,
   } = useImageSlider(images.length);
 
@@ -26,12 +24,7 @@ export default function ImageSlider(): JSX.Element {
       tabIndex={0}
       aria-live="polite"
     >
-      <MotionSlider
-        currentIndex={currentIndex}
-        direction={direction}
-      >
-        <ImageSliderView images={images} currentIndex={currentIndex} />
-      </MotionSlider>
+      <ImageSliderView images={images} currentIndex={currentIndex} />
 
       <RedSliderControls 
         prevSlide={prevItem}
