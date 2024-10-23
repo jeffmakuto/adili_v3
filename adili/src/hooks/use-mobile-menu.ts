@@ -39,7 +39,7 @@ const useMobileMenu = () => {
     document.addEventListener('keydown', handleKeyDown);
     window.addEventListener('resize', handleResize);
 
-    /* Disable scrolling when the menu is open */
+    /* Disable activity when the menu is open */
     if (isOpen) {
       document.body.classList.add('overflow-hidden', 'h-screen');
     } else {
