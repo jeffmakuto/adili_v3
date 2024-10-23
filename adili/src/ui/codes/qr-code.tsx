@@ -5,8 +5,8 @@ const QRCode: React.FC<Dimensions> = ({ width, height }) => {
   return (
     <div className="relative">
       <Image
-        src="/images/Qr Code.png"
-        alt="Qr Code"
+        src="/images/QR-Code.png"
+        alt="QR Code"
         width={width}
         height={height}
         style={{ objectFit: 'contain' }}
