@@ -39,10 +39,18 @@ const useMobileMenu = () => {
     document.addEventListener('keydown', handleKeyDown);
     window.addEventListener('resize', handleResize);
 
+    /* Disable scrolling when the menu is open */
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden', 'h-screen');
+    } else {
+      document.body.classList.remove('overflow-hidden', 'h-screen');
+    }
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('resize', handleResize);
+      document.body.classList.remove('overflow-hidden', 'h-screen');
     };
   }, [closeMenu, isOpen]);
 
