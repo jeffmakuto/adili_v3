@@ -22,3 +22,10 @@ export type IconProps = {
 export type ChevronDownIconProps = IconProps & {
     isActive: boolean;
 }
+
+export type MotionSliderProps = {
+    currentIndex: number;
+    direction: string;
+    children: React.ReactNode;
+}
+  
