@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClipboard } from '@fortawesome/free-solid-svg-icons';
-import { heading, paragraph } from '@/styles/values';
-import { DeclarationProps } from '@/types/policies';
-import DeclarationButton from '@/ui/buttons/declaration';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
+import { heading, paragraph } from '@/styles/values'
+import { DeclarationProps } from '@/types/policies'
+import GiftRegister from '@/ui/buttons/gift'
 
 const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
     return (
@@ -18,11 +18,11 @@ const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
                     Declaration
                 </h2>
                 <p className={`${paragraph} mb-4`}>
-                    To declare any gifts and entertainment, please fill out the declaration form.
+                    To declare any gifts and entertainment, please fill out the gift register.
                 </p>
             </div>
             <div className="mt-16">
-                <DeclarationButton link={declarationLink} />
+                <GiftRegister link={declarationLink} />
             </div>
         </div>
     );
