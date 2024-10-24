@@ -20,17 +20,14 @@ const Mission: React.FC = () => {
     <div className="md:pt-28">
       <h2 className="text-lg md:text-xl lg:text-3xl font-extrabold">
         <em className="text-red-600">
-          Our<br />
-          Mission
+          Our Mission
         </em>
       </h2>
       <p className="text-sm md:text-sm lg:text-lg">
         <em>
           <strong>
-            To propel Africa&rsquo;s<br />
-            prosperity by<br />
-            connecting its<br />
-            people, cultures<br />
+            To propel Africa&rsquo;s prosperity by <span className="hidden md:inline"> <br /> </span> 
+            connecting its people, cultures <span className="hidden md:inline"> <br /> </span> 
             and markets.
           </strong>
         </em>

@@ -17,19 +17,17 @@ const Vision: React.FC = () => {
   };
 
   return (
-    <div className="md:pt-28">
+    <div className="pt-4">
       <h2 className="text-lg md:text-xl lg:text-3xl font-extrabold">
         <em className="text-red-600">
-          Vision
+          Our Vision
         </em>
       </h2>
       <p className="text-sm md:text-sm lg:text-lg">
         <em>
           <strong>
-            To be Africa&rsquo;s<br />
-            preferred and<br />
-            sustainable<br />
-            aviation group.
+            To be Africa&rsquo;s preferred <span className="hidden md:inline"> <br /> </span>
+            and sustainable aviation group.
           </strong>
         </em>
       </p>
