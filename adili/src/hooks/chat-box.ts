@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Message } from '@/types/chat'
 
 /* Custom hook to handle messages, input logic */
@@ -28,13 +28,26 @@ export function useChat() {
   };
 }
 
-
-export function useChatToggle () {
+export function useChatToggle() {
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   const toggleChat = () => {
     setIsChatOpen(prevState => !prevState);
   };
 
+  useEffect(() => {
+    /* Disable scrolling when chat is open */
+    if (isChatOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+    
+    /* Clean up the class on unmount */
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, [isChatOpen]);
+
   return { isChatOpen, toggleChat };
-};
+}
