@@ -28,7 +28,7 @@ const FloatingCard: React.FC<{
   useClickOutside(cardRef, onClose);
 
   /* Use the floating card hook for managing open state and body scroll */
-  const { isOpen, handleClose } = useFloatingCard(onClose);
+  const { isOpen } = useFloatingCard(onClose);
 
   return (
     isOpen && ( /* Only render the card if it's open */
