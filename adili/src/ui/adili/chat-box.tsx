@@ -73,7 +73,7 @@ const ChatBox: React.FC = () => {
   return (
     <div role="region" aria-label="Chat box" className="flex flex-col h-full rounded-lg shadow-lg bg-white overflow-hidden">
       <Header />
-      <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[200px] max-h-[300px] md:min-h-[500px] md:max-h-[600px] bg-gray-50">
+      <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[400px] max-h-[500px] md:min-h-[500px] md:max-h-[600px] bg-gray-50">
         {localMessages.length === 0 ? (
           <DefaultContent />
         ) : (
