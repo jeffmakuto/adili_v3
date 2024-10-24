@@ -12,7 +12,7 @@ const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSend, isLoad
       <textarea
         ref={textAreaRef}
         className={`flex-1 p-2 border rounded-md resize-none ${isLoading ? 'opacity-50' : ''}`}
-        placeholder="Type your message..."
+        placeholder="Message Adili..."
         value={value}
         onChange={onChange}
         onKeyDown={handleKeyDown}
