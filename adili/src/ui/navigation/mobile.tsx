@@ -39,6 +39,7 @@ const MobileMenu: React.FC<MenuProps> = ({ links }) => {
                   }
                 }}
                 subNavLinks={link.subNavLinks}
+                closeMenu={closeMenu}
               />
             ))}
           </div>

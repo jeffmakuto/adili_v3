@@ -6,8 +6,20 @@ import { NavItemProps } from '@/types/link'
 import { getItemClass, getIconClass, getLinkClass, getDropdownClass, getSubNavLinkClass } from '@/styles/nav-item-styles'
 import useNavItem from '@/hooks/use-nav-item'
 
-const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick, subNavLinks }) => {
+const NavItem: React.FC<NavItemProps & { closeMenu: () => void }> = ({
+  href,
+  label,
+  icon,
+  isActive,
+  onClick,
+  subNavLinks,
+  closeMenu,
+}) => {
   const { isOpen, handleMouseEnter, handleMouseLeave, handleClick } = useNavItem({ subNavLinks, onClick });
+
+  const handleSubNavLinkClick = () => {
+    closeMenu();
+  };
 
   return (
     <div
@@ -32,7 +44,7 @@ const NavItem: React.FC<NavItemProps> = ({ href, label, icon, isActive, onClick,
         <div className={getDropdownClass()}>
           {subNavLinks.map(subLink => (
             <Link key={subLink.href} href={subLink.href} passHref>
-              <div className={getSubNavLinkClass()}>
+              <div className={getSubNavLinkClass()} onClick={handleSubNavLinkClick}>
                 {subLink.label}
               </div>
             </Link>
