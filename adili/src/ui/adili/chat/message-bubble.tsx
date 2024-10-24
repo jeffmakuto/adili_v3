@@ -1,21 +1,18 @@
 import { format } from 'date-fns'
-
-interface MessageBubbleProps {
-  text: string;
-  sender: string;
-  timestamp: number;
-}
+import { MessageBubbleProps } from '@/types/chat'
 
 const MessageBubble: React.FC<MessageBubbleProps> = ({ text, sender, timestamp }) => {
-  const bubbleStyle = sender === 'user' ? 'bg-red-600 text-white' : 'bg-gray-100 text-black';
-  const alignStyle = sender === 'user' ? 'items-end' : 'items-start';
+  const isUser = sender === 'user';
+  const bubbleStyle = isUser ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800';
+  const alignStyle = isUser ? 'justify-end' : 'justify-start';
+  const animation = 'animate-slideIn';
 
   return (
-    <div className={`flex flex-col ${alignStyle}`}>
-      <div className={`p-3 rounded-2xl shadow-md ${bubbleStyle} max-w-[70%] break-words`}>
+    <div className={`flex w-full ${alignStyle} transition-all ${animation} my-2`}>
+      <div className={`p-3 rounded-2xl shadow-md ${bubbleStyle} max-w-[50%] break-words`}>
         {text}
       </div>
-      <span className="text-xs text-gray-400 mt-1">
+      <span className="text-xs text-gray-400 mt-1 ml-2">
         {format(new Date(timestamp), 'HH:mm')}
       </span>
     </div>

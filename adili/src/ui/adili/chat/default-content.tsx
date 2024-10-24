@@ -1,4 +1,3 @@
-import ScrollingMessage from '@/ui/header/scroll'
 import Image from 'next/image'
 
 const DefaultContent: React.FC = () => (

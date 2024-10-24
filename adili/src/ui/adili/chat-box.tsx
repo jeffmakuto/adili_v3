@@ -1,40 +1,92 @@
-'use client'
+'use client';
 
-import { useRef } from 'react'
-import { useChat } from '@/hooks/chat-box'
-import Header from '@/ui/adili/chat/header'
-import MessageBubble from '@/ui/adili/chat/message-bubble'
-import InputField from '@/ui/adili/chat/input-field'
-import DefaultContent from '@/ui/adili/chat/default-content'
-import useScrollToBottom from '@/hooks/use-scroll-to-bottom'
+import { useRef, useState, useEffect } from 'react';
+import { useChat } from '@/hooks/chat-box';
+import Header from '@/ui/adili/chat/header';
+import MessageBubble from '@/ui/adili/chat/message-bubble';
+import InputField from '@/ui/adili/chat/input-field';
+import DefaultContent from '@/ui/adili/chat/default-content';
+import LoadingDots from '@/ui/adili/chat/loading';
 
 const ChatBox: React.FC = () => {
-  const { messages, inputValue, handleSend, handleInputChange } = useChat();
+  const { messages, inputValue, handleInputChange } = useChat();
+  const [isLoading, setIsLoading] = useState(false);
+  const [typing, setTyping] = useState(false);
   const messageEndRef = useRef<HTMLDivElement | null>(null);
+  const [localMessages, setLocalMessages] = useState(messages);
 
-  /* Scroll to the bottom of the chat whenever new messages arrive */
-  useScrollToBottom(messages, messageEndRef);
+  // Automatically scroll to the bottom when messages change.
+  useEffect(() => {
+    setLocalMessages(messages); // Update local messages state
+  }, [messages]);
+
+  useEffect(() => {
+    const chatContainer = messageEndRef.current;
+    if (chatContainer) {
+      chatContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [localMessages, isLoading]);
+
+  const handleSend = async () => {
+    if (!inputValue) return;
+
+    addMessageToChat({ text: inputValue, sender: 'user' });
+    clearInputField();
+    setIsLoading(true);
+    setTyping(true);
+
+    try {
+      const response = await fetchBotResponse(inputValue);
+      if (response?.reply) {
+        addMessageToChat({ text: response.reply, sender: 'bot' });
+      } else {
+        addMessageToChat({ text: 'Sorry, I could not process that.', sender: 'bot' });
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      addMessageToChat({ text: 'An error occurred. Please try again.', sender: 'bot' });
+    } finally {
+      setIsLoading(false);
+      setTyping(false);
+    }
+  };
+
+  const addMessageToChat = (message: { text: string; sender: string }) => {
+    setLocalMessages((prevMessages) => [
+      ...prevMessages,
+      { ...message, timestamp: new Date() },
+    ]);
+  };
+
+  const clearInputField = () => {
+    handleInputChange({ target: { value: '' } } as React.ChangeEvent<HTMLTextAreaElement>);
+  };
+
+  const fetchBotResponse = async (userMessage: string) => {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMessage }),
+    });
+    return await response.json();
+  };
 
   return (
-    <div className="flex flex-col h-full rounded-lg shadow-md">
+    <div role="region" aria-label="Chat box" className="flex flex-col h-full rounded-lg shadow-lg bg-white overflow-hidden">
       <Header />
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50 space-y-4 min-h-[500px] max-h-[600px]">
-        {messages.length === 0 ? (
+      <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[500px] max-h-[600px] bg-gray-50">
+        {localMessages.length === 0 ? (
           <DefaultContent />
         ) : (
-          messages.map((msg, index) => (
-            <MessageBubble
-              key={index}
-              text={msg.text}
-              sender={msg.sender}
-              timestamp={msg.timestamp.getTime()}
-            />
+          localMessages.map((msg, index) => (
+            <MessageBubble key={index} text={msg.text} sender={msg.sender} timestamp={msg.timestamp.getTime()} />
           ))
         )}
-        {/* Reference div to scroll to the end */}
+
+        {isLoading && <LoadingDots />}
         <div ref={messageEndRef} />
       </div>
-      <InputField value={inputValue} onChange={handleInputChange} onSend={handleSend} />
+      <InputField value={inputValue} onChange={handleInputChange} onSend={handleSend} isLoading={isLoading} />
     </div>
   );
 };
