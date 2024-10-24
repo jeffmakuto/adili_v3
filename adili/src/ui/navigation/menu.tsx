@@ -18,6 +18,7 @@ const Menu: React.FC<MenuProps> = ({ links }) => {
             icon={link.icon}
             isActive={asPath === link.href}
             subNavLinks={link.subNavLinks}
+            closeMenu={() => {}}
           />
         ))}
       </div>
