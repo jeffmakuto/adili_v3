@@ -11,20 +11,17 @@ import LoadingDots from '@/ui/adili/chat/loading';
 const ChatBox: React.FC = () => {
   const { messages, inputValue, handleInputChange } = useChat();
   const [isLoading, setIsLoading] = useState(false);
-  const [typing, setTyping] = useState(false);
   const messageEndRef = useRef<HTMLDivElement | null>(null);
   const [localMessages, setLocalMessages] = useState(messages);
 
-  // Automatically scroll to the bottom when messages change.
+  /* Automatically update localMessages when global messages change. */
   useEffect(() => {
-    setLocalMessages(messages); // Update local messages state
+    setLocalMessages(messages); /* Update local messages state */
   }, [messages]);
 
+  /* Automatically scroll to the bottom of the chat when localMessages or isLoading state changes. */
   useEffect(() => {
-    const chatContainer = messageEndRef.current;
-    if (chatContainer) {
-      chatContainer.scrollIntoView({ behavior: 'smooth' });
-    }
+    messageEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [localMessages, isLoading]);
 
   const handleSend = async () => {
@@ -33,7 +30,6 @@ const ChatBox: React.FC = () => {
     addMessageToChat({ text: inputValue, sender: 'user' });
     clearInputField();
     setIsLoading(true);
-    setTyping(true);
 
     try {
       const response = await fetchBotResponse(inputValue);
@@ -47,7 +43,6 @@ const ChatBox: React.FC = () => {
       addMessageToChat({ text: 'An error occurred. Please try again.', sender: 'bot' });
     } finally {
       setIsLoading(false);
-      setTyping(false);
     }
   };
 
@@ -68,7 +63,11 @@ const ChatBox: React.FC = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: userMessage }),
     });
-    return await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.statusText}`);
+    }
+    return response.json();
   };
 
   return (
