@@ -1,6 +1,6 @@
 'use client'
 
-import { FaComments, FaTimes } from 'react-icons/fa'
+import { FaComments, FaMinusCircle } from 'react-icons/fa'
 import ChatBox from '@/ui/adili/chat-box'
 import { useChatToggle } from '@/hooks/chat-box'
 
@@ -23,9 +23,9 @@ const FloatingChatButton: React.FC = () => {
 
       {isChatOpen && (
         <div className="fixed inset-0 z-50 bg-white shadow-lg flex flex-col animate-fadeIn">
-          <div className="flex items-center justify-between p-4">
+          <div className="flex justify-end p-4">
             <button onClick={toggleChat} className="p-2 rounded-full bg-red-600 hover:bg-red-700">
-              <FaTimes size={20} />
+              <FaMinusCircle size={20} />
             </button>
           </div>
           <div className="flex-grow">
