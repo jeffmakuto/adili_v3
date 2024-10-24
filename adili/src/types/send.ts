@@ -1,5 +1,6 @@
 export interface SendButtonProps {
-    onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
 }
 
 export type UseSendOnEnterProps = {
@@ -7,7 +8,12 @@ export type UseSendOnEnterProps = {
 }
 
 export type InputFieldProps = {
-    value: string;
-    onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
-    onSend: () => void;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onSend: () => void;
+  isLoading: boolean;
+}
+
+export type LoadingDotsProps = {
+  showTyping?: boolean;
 }
