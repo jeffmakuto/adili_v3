@@ -1,4 +1,4 @@
-import { paragraph } from '@/styles/values';
+import { paragraph } from '@/styles/values'
 import Image from 'next/image'
 
 const DefaultContent: React.FC = () => (
@@ -12,9 +12,11 @@ const DefaultContent: React.FC = () => (
         height={600}
       />
     </div>
-    <div className="flex flex-col items-center justify-center">
-      <p className={paragraph}>Welcome. How can I assist you today?</p>
-      <p className={paragraph}>Feel free to ask me anything.</p>
+    <div className="flex flex-col items-center justify-center px-4 lg:px-8">
+      <p className={paragraph}>
+        Welcome. Let’s explore questions around ethics and 
+        integrity together—what’s on your mind?
+      </p>
     </div>
   </div>
 );

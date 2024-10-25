@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { useRef, useState, useEffect } from 'react';
-import { useChat } from '@/hooks/chat-box';
-import Header from '@/ui/adili/chat/header';
-import MessageBubble from '@/ui/adili/chat/message-bubble';
-import InputField from '@/ui/adili/chat/input-field';
-import DefaultContent from '@/ui/adili/chat/default-content';
-import LoadingDots from '@/ui/adili/chat/loading';
+import { useRef, useState, useEffect } from 'react'
+import { useChat } from '@/hooks/chat-box'
+import Header from '@/ui/adili/chat/header'
+import MessageBubble from '@/ui/adili/chat/message-bubble'
+import InputField from '@/ui/adili/chat/input-field'
+import DefaultContent from '@/ui/adili/chat/default-content'
+import LoadingDots from '@/ui/adili/chat/loading'
 
 const ChatBox: React.FC = () => {
   const { messages, inputValue, handleInputChange } = useChat();
@@ -71,23 +71,39 @@ const ChatBox: React.FC = () => {
   };
 
   return (
-    <div role="region" aria-label="Chat box" className="flex flex-col h-full rounded-lg shadow-lg bg-white overflow-hidden">
-      <Header />
-      <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[500px] max-h-[600px] bg-gray-50">
-        {localMessages.length === 0 ? (
-          <DefaultContent />
-        ) : (
-          localMessages.map((msg, index) => (
-            <MessageBubble key={index} text={msg.text} sender={msg.sender} timestamp={msg.timestamp.getTime()} />
-          ))
-        )}
-
-        {isLoading && <LoadingDots />}
-        <div ref={messageEndRef} />
+    <div className="min-h-screen flex justify-center">
+      <div
+        role="region"
+        aria-label="Chat box"
+        className="w-4/5 flex flex-col bg-white overflow-hidden"
+      >
+        <Header />
+        <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[300px] max-h-[400px] md:min-h-[400px] md:max-h-[500px] bg-gray-50">
+          {localMessages.length === 0 ? (
+            <DefaultContent />
+          ) : (
+            localMessages.map((msg, index) => (
+              <MessageBubble
+                key={index}
+                text={msg.text}
+                sender={msg.sender}
+                timestamp={msg.timestamp.getTime()}
+              />
+            ))
+          )}
+  
+          {isLoading && <LoadingDots />}
+          <div ref={messageEndRef} />
+        </div>
+        <InputField
+          value={inputValue}
+          onChange={handleInputChange}
+          onSend={handleSend}
+          isLoading={isLoading}
+        />
       </div>
-      <InputField value={inputValue} onChange={handleInputChange} onSend={handleSend} isLoading={isLoading} />
     </div>
-  );
+  );  
 };
 
 export default ChatBox;
