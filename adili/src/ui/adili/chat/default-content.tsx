@@ -1,3 +1,4 @@
+import { paragraph } from '@/styles/values';
 import Image from 'next/image'
 
 const DefaultContent: React.FC = () => (
@@ -12,8 +13,8 @@ const DefaultContent: React.FC = () => (
       />
     </div>
     <div className="flex flex-col items-center justify-center">
-      <p className="text-gray-700">Welcome. How can I assist you today?</p>
-      <p className="text-gray-700">Feel free to ask me anything.</p>
+      <p className={paragraph}>Welcome. How can I assist you today?</p>
+      <p className={paragraph}>Feel free to ask me anything.</p>
     </div>
   </div>
 );
