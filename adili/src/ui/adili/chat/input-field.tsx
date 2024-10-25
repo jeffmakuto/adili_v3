@@ -1,7 +1,8 @@
-import SendButton from '@/ui/buttons/send-button';
-import useAutoResizeTextArea from '@/hooks/input-field';
-import { InputFieldProps } from '@/types/send';
-import useSendOnEnter from '@/hooks/use-send-on-enter';
+import SendButton from '@/ui/buttons/send-button'
+import useAutoResizeTextArea from '@/hooks/input-field'
+import { InputFieldProps } from '@/types/send'
+import useSendOnEnter from '@/hooks/use-send-on-enter'
+import { paragraph } from '@/styles/values'
 
 const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSend, isLoading }) => {
   const textAreaRef = useAutoResizeTextArea(value);
@@ -11,7 +12,9 @@ const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSend, isLoad
     <div className="p-4 border-t border-gray-300 flex items-center space-x-4 bg-white">
       <textarea
         ref={textAreaRef}
-        className={`flex-1 p-2 border rounded-md resize-none ${isLoading ? 'opacity-50' : ''}`}
+        className={`flex-1 p-2 border rounded-md resize-none ${paragraph} ${
+          isLoading ? 'opacity-50' : ''
+        }`}
         placeholder="Message Adili..."
         value={value}
         onChange={onChange}

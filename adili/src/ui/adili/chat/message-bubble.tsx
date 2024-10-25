@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 import { MessageBubbleProps } from '@/types/chat'
+import { paragraph } from '@/styles/values'
 
 const MessageBubble: React.FC<MessageBubbleProps> = ({ text, sender, timestamp }) => {
   const isUser = sender === 'user';
@@ -9,7 +10,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ text, sender, timestamp }
 
   return (
     <div className={`flex w-full ${alignStyle} transition-all ${animation} my-2`}>
-      <div className={`p-3 rounded-2xl shadow-md ${bubbleStyle} max-w-[50%] break-words`}>
+      <div className={`p-3 rounded-2xl shadow-md ${bubbleStyle} max-w-[50%] break-words ${paragraph}`}>
         {text}
       </div>
       <span className="text-xs text-gray-400 mt-1 ml-2">
