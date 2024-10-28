@@ -55,8 +55,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #000;
-    --kq-brand-secondary: #fff;
+    --background-color: #fff;
+    --kq-brand-secondary: #0d0d0d;
   }
 }
 
