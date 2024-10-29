@@ -1,20 +1,11 @@
-import { CEOVideoProps } from '@/types/policies'
+import VideoPlayer from '@/ui/general/video-player'
 
-const ExplainerVideo: React.FC<CEOVideoProps> = ({ className }) => {
+const ExplainerVideo: React.FC = () => {
+  const videoUrl = '/api/adili/';
+
   return (
-    <div>
-      <video className={className} controls preload="none" muted autoPlay>
-        <source src="/videos/Trial.mp4" type="video/mp4" />
-        <track
-          src="/videos/Trial.vtt"
-          kind="subtitles"
-          srcLang="en"
-          label="English"
-        />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+      <VideoPlayer videoUrl={videoUrl} />
   );
-}
+};
 
 export default ExplainerVideo;
