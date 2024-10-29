@@ -1,12 +1,4 @@
 import { ChangeEvent } from 'react'
-
-export type CEOVideoProps = {
-    className?: string;
-}
-export type AmbassadorVideoProps = {
-    className?: string;
-    videoSrc: string;
-}
   
 export type SearchBarProps = {
     searchTerm: string;

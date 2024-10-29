@@ -6,4 +6,8 @@ export type SectionImageProps = {
     src: string;
     alt: string;
 }
-  
+
+export type VideoPlayerProps = {
+    className?: string;
+    videoUrl: string;
+}

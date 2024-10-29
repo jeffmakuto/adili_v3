@@ -1,4 +1,4 @@
-export interface SendButtonProps {
+export type SendButtonProps = {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled?: boolean;
 }
