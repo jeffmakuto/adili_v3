@@ -8,7 +8,7 @@ const Explainer: React.FC = () => {
       </h1>
       <div className="flex justify-center items-center p-4">
         <div className="w-full max-w-4xl p-4"> 
-          <ExplainerVideo className="w-full" />
+          <ExplainerVideo />
         </div>
       </div>
     </div>

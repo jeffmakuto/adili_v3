@@ -1,14 +1,15 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClipboard } from '@fortawesome/free-solid-svg-icons';
-import { heading, paragraph } from '@/styles/values';
-import { DeclarationProps } from '@/types/policies';
-import DeclarationButton from '@/ui/buttons/declaration';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
+import { heading, paragraph } from '@/styles/values'
+import { DeclarationProps } from '@/types/policies'
+import DeclarationButton from '@/ui/buttons/declaration'
 
-const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
+const Declaration: React.FC<DeclarationProps> = () => {
+    const declarationLink = process.env.NEXT_PUBLIC_DECLARATION_LINK || '#';
+
     return (
         <div className="flex flex-col md:flex-row justify-start p-4 md:space-x-48">
-            <div className="flex flex-col shadow-lg rounded-lg hover:scale-105
-             bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6">
+            <div className="flex flex-col shadow-lg rounded-lg hover:scale-105 bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6">
                 <h2 className={heading}>
                     <FontAwesomeIcon
                         icon={faClipboard}

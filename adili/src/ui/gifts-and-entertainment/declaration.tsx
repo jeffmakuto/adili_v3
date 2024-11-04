@@ -4,7 +4,9 @@ import { heading, paragraph } from '@/styles/values'
 import { DeclarationProps } from '@/types/policies'
 import GiftRegister from '@/ui/buttons/gift'
 
-const Declaration: React.FC<DeclarationProps> = ({ declarationLink }) => {
+const Declaration: React.FC<DeclarationProps> = () => {
+    const declarationLink = process.env.NEXT_PUBLIC_GIFT_REGISTER || '#';
+
     return (
         <div className="flex flex-col md:flex-row justify-start p-4 md:space-x-48">
             <div className="flex flex-col shadow-lg rounded-lg hover:scale-105

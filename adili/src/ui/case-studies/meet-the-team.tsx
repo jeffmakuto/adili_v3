@@ -8,7 +8,7 @@ const MeetTheTeam: React.FC = () => {
       </h1>
       <div className="flex justify-center items-center p-4 md:mt-12">
         <div className="w-full max-w-4xl p-4"> 
-          <TeamVideo className="w-full" />
+          <TeamVideo />
         </div>
       </div>
     </div>
