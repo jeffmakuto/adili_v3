@@ -1,6 +1,4 @@
-interface CloseButtonProps {
-    onClose: () => void;
-  }
+import { CloseButtonProps } from '@/types/close'
   
   const CloseButton: React.FC<CloseButtonProps> = ({ onClose }) => (
     <button
