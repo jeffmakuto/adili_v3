@@ -1,5 +1,5 @@
 import { carouselItems } from '@/data/ethics-principles'
-import Carousel from '@/ui/policies/carousel'
+import Carousel from '@/ui/principles/carousel'
 
 const EthicsPrinciples: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const EthicsPrinciples: React.FC = () => {
         Ethics and Integrity Principles
       </h1>
       <div className="flex justify-center items-center">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-7xl">
           <Carousel items={carouselItems} />
         </div>
       </div>
