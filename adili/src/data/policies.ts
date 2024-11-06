@@ -13,11 +13,4 @@ export const policies = [
     embedSrc: process.env.NEXT_PUBLIC_PCC_EMBED_SRC || '#',
     icon: '/images/business-partner.jpg',
   },
-  {
-    id: '3',
-    title: 'Ethics Charter (EC)',
-    description: 'Guiding framework for decision-making and behavior, ensuring that all members adhere to a shared set of values',
-    embedSrc: process.env.NEXT_PUBLIC_EC_EMBED_SRC || '#',
-    icon: '/images/ethics-charter.jpg',
-  },
 ];
