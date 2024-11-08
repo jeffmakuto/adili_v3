@@ -14,7 +14,7 @@ const CompanyAssets: React.FC = () => {
             {/* First Section */}
             <section className="flex flex-col">
                 <div className="flex justify-center py-2 mb-4 shadow-lg rounded-lg">
-                    {renderHeroImage("/images/company-asset.JPG", "K64998-3 Image")}
+                    {renderHeroImage("/images/company-asset.jpg", "K64998-3 Image")}
                 </div>
                 <div className="flex flex-col justify-center p-4">
                     <div>
