@@ -7,9 +7,9 @@ interface CaseSelectorProps {
 }
 
 const CaseSelector: React.FC<CaseSelectorProps> = ({ selectedCaseIndex, setSelectedCaseIndex }) => (
-  <div className="text-center p-6 rounded-lg shadow-lg">
+  <div className="text-center p-6">
     <h2 className={heading}>Ethics & Integrity Case Studies</h2>
-    <ul className="space-y-4">
+    <ul className="space-y-4 mt-4">
       {caseList.map((caseItem, index) => (
         <li key={index}>
           <button

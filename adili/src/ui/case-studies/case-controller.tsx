@@ -12,11 +12,11 @@ const CaseController: React.FC = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     
     {/* Left Column: Meet the Team + Case Selector */}
-    <div className="shadow-lg flex flex-col space-y-8">
+    <div className="flex flex-col space-y-4 md:space-y-16">
         <MeetTheTeam />
         
         {/* Case Selector below Meet The Team */}
-        <div className="p-4 shadow-md">
+        <div className="p-4">
         <CaseSelector
             selectedCaseIndex={selectedCaseIndex}
             setSelectedCaseIndex={setSelectedCaseIndex}

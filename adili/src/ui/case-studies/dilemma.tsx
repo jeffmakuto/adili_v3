@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Dilemma: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-auto">
+    <div className="flex flex-col justify-center items-center w-full h-auto md:mt-20">
       <Image
         src="/images/dilemma.png"
         alt="Ethical Dilemma Image"
