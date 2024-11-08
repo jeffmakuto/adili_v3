@@ -1,15 +1,11 @@
 import { heading } from '@/styles/values'
 import { caseList } from '@/ui/case-studies/case-list'
-
-interface CaseSelectorProps {
-  selectedCaseIndex: number
-  setSelectedCaseIndex: (index: number) => void
-}
+import { CaseSelectorProps } from '@/types/cases'
 
 const CaseSelector: React.FC<CaseSelectorProps> = ({ selectedCaseIndex, setSelectedCaseIndex }) => (
   <div className="text-center p-6">
     <h2 className={heading}>Ethics & Integrity Case Studies</h2>
-    <ul className="space-y-4 mt-4">
+    <ul className="space-y-4 mt-4 shadow-lg rounded-lg">
       {caseList.map((caseItem, index) => (
         <li key={index}>
           <button

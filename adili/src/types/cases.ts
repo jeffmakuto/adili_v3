@@ -19,3 +19,8 @@ export type AnimateModalProps = {
     backdropClassName?: string;
     modalClassName?: string;
 }
+
+export type CaseSelectorProps = {
+    selectedCaseIndex: number
+    setSelectedCaseIndex: (index: number) => void
+}
