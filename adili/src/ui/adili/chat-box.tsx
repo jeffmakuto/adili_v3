@@ -5,7 +5,6 @@ import { useChat } from '@/hooks/chat-box'
 import Header from '@/ui/adili/chat/header'
 import MessageBubble from '@/ui/adili/chat/message-bubble'
 import InputField from '@/ui/adili/chat/input-field'
-import DefaultContent from '@/ui/adili/chat/default-content'
 import LoadingDots from '@/ui/adili/chat/loading'
 
 const ChatBox: React.FC = () => {
@@ -79,19 +78,15 @@ const ChatBox: React.FC = () => {
       >
         <Header />
         <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[300px] max-h-[400px] md:min-h-[400px] md:max-h-[500px] bg-gray-50">
-          {localMessages.length === 0 ? (
-            <DefaultContent />
-          ) : (
-            localMessages.map((msg, index) => (
-              <MessageBubble
-                key={index}
-                text={msg.text}
-                sender={msg.sender}
-                timestamp={msg.timestamp.getTime()}
-              />
-            ))
-          )}
-  
+          {localMessages.map((msg, index) => (
+            <MessageBubble
+              key={index}
+              text={msg.text}
+              sender={msg.sender}
+              timestamp={msg.timestamp.getTime()}
+            />
+          ))}
+
           {isLoading && <LoadingDots />}
           <div ref={messageEndRef} />
         </div>
