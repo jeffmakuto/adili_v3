@@ -5,7 +5,7 @@ import Case4 from '@/ui/case-studies/case4/case'
 import Dilemma from '@/ui/case-studies/dilemma'
 
 export const caseList = [
-  { title: "Ethical Dilemmas", component: <Dilemma /> },
+  { title: "Introduction to the Ethical Dilemmas", component: <Dilemma /> },
   { title: "Accepting Hospitality from a Business partner in return for a favor", component: <Case1 /> },
   { title: "Accepting a gift/bribe in return for a favour", component: <Case2 /> },
   { title: "Acceptance of Unwelcomed Gifts", component: <Case3 /> },
