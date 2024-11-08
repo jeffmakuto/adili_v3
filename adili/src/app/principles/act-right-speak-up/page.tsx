@@ -29,10 +29,10 @@ const ActRightSpeakUp: React.FC = () => {
 
             {/* Second Section */}
             <section className="flex flex-col">
-                <div className="flex justify-center py-2 mb-4 md:mt-16 shadow-lg rounded-lg">
+                <div className="flex justify-center py-2 mb-4 md:mt-14 shadow-lg rounded-lg">
                     {renderHeroImage("/images/act-right.jpg", "Act Right Speak Up Sketch Image")}
                 </div>
-                <div className="flex flex-col justify-center mt-8 md:mt-16 p-4">
+                <div className="flex flex-col justify-center mt-8 md:mt-14 p-4">
                     <div>
                         <Hotline />
                     </div>
