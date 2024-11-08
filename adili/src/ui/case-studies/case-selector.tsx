@@ -16,7 +16,7 @@ const CaseSelector: React.FC<CaseSelectorProps> = ({ selectedCaseIndex, setSelec
             className={`w-full text-left py-2 px-4 rounded-md transition-all duration-300 ${
               index === selectedCaseIndex
                 ? 'bg-red-600 text-white font-bold'
-                : 'text-red-600 hover:bg-red-100'
+                : 'text-black hover:text-white hover:bg-red-700'
             }`}
             onClick={() => setSelectedCaseIndex(index)}
           >
