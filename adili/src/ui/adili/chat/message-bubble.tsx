@@ -10,7 +10,7 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({ text, sender, timestamp }
 
   return (
     <div className={`flex w-full ${alignStyle} transition-all ${animation} my-2`}>
-      <div className={`p-3 rounded-2xl shadow-lg ${bubbleStyle} max-w-[50%] break-words ${paragraph}`}>
+      <div className={`p-3 rounded-2xl shadow-lg ${bubbleStyle} max-w-[75%] break-words ${paragraph}`}>
         {text}
       </div>
       <span className="text-xs text-gray-400 mt-1 ml-2">

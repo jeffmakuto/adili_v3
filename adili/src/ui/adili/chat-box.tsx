@@ -11,7 +11,7 @@ const ChatBox: React.FC = () => {
   const { messages, inputValue, isLoading, messageEndRef, handleSend, handleInputChange } = useChatBox();
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  // Toggle fullscreen state
+  /* Toggle fullscreen state */
   const handleToggleFullscreen = () => {
     setIsFullscreen(prevState => !prevState);
   };
