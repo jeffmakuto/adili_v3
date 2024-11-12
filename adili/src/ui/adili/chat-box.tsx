@@ -27,7 +27,7 @@ const ChatBox: React.FC = () => {
       )}
       
       <Header onToggleFullscreen={handleToggleFullscreen} isFullscreen={isFullscreen} />
-      <div className="p-4 overflow-y-auto space-y-3 flex-grow">
+      <div className="p-4 overflow-y-auto space-y-3 flex-grow z-50">
         {messages.map((msg, index) => (
           <MessageBubble key={index} text={msg.text} sender={msg.sender} timestamp={msg.timestamp.getTime()} />
         ))}
