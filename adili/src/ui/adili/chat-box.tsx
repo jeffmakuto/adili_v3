@@ -1,104 +1,44 @@
 'use client'
 
-import { useRef, useState, useEffect } from 'react'
-import { useChat } from '@/hooks/chat-box'
+import { useState } from 'react'
+import useChatBox from '@/hooks/api-chatbox'
 import Header from '@/ui/adili/chat/header'
 import MessageBubble from '@/ui/adili/chat/message-bubble'
 import InputField from '@/ui/adili/chat/input-field'
 import LoadingDots from '@/ui/adili/chat/loading'
 
 const ChatBox: React.FC = () => {
-  const { messages, inputValue, handleInputChange } = useChat();
-  const [isLoading, setIsLoading] = useState(false);
-  const messageEndRef = useRef<HTMLDivElement | null>(null);
-  const [localMessages, setLocalMessages] = useState(messages);
+  const { messages, inputValue, isLoading, messageEndRef, handleSend, handleInputChange } = useChatBox();
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
-  /* Automatically update localMessages when global messages change. */
-  useEffect(() => {
-    setLocalMessages(messages); /* Update local messages state */
-  }, [messages]);
-
-  /* Automatically scroll to the bottom of the chat when localMessages or isLoading state changes. */
-  useEffect(() => {
-    messageEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [localMessages, isLoading]);
-
-  const handleSend = async () => {
-    if (!inputValue) return;
-
-    addMessageToChat({ text: inputValue, sender: 'user' });
-    clearInputField();
-    setIsLoading(true);
-
-    try {
-      const response = await fetchBotResponse(inputValue);
-      if (response?.reply) {
-        addMessageToChat({ text: response.reply, sender: 'bot' });
-      } else {
-        addMessageToChat({ text: 'Sorry, I could not process that.', sender: 'bot' });
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      addMessageToChat({ text: 'An error occurred. Please try again.', sender: 'bot' });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const addMessageToChat = (message: { text: string; sender: string }) => {
-    setLocalMessages((prevMessages) => [
-      ...prevMessages,
-      { ...message, timestamp: new Date() },
-    ]);
-  };
-
-  const clearInputField = () => {
-    handleInputChange({ target: { value: '' } } as React.ChangeEvent<HTMLTextAreaElement>);
-  };
-
-  const fetchBotResponse = async (userMessage: string) => {
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: userMessage }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Error: ${response.statusText}`);
-    }
-    return response.json();
+  // Toggle fullscreen state
+  const handleToggleFullscreen = () => {
+    setIsFullscreen(prevState => !prevState);
   };
 
   return (
-    <div className="min-h-screen flex justify-center">
-      <div
-        role="region"
-        aria-label="Chat box"
-        className="w-4/5 flex flex-col bg-white overflow-hidden"
-      >
-        <Header />
-        <div className="flex-1 p-4 overflow-y-auto space-y-3 min-h-[300px] max-h-[400px] md:min-h-[400px] md:max-h-[500px] bg-gray-50">
-          {localMessages.map((msg, index) => (
-            <MessageBubble
-              key={index}
-              text={msg.text}
-              sender={msg.sender}
-              timestamp={msg.timestamp.getTime()}
-            />
-          ))}
-
-          {isLoading && <LoadingDots />}
-          <div ref={messageEndRef} />
-        </div>
-        <InputField
-          value={inputValue}
-          onChange={handleInputChange}
-          onSend={handleSend}
-          isLoading={isLoading}
-        />
+    <div 
+      className={`flex flex-col h-full ${isFullscreen ? 'fixed top-0 left-0 right-0 bottom-0 bg-white' : ''}`}
+      style={isFullscreen ? { overflow: 'hidden' } : {}}
+    >
+      {/* If fullscreen, dim the rest of the page */}
+      {isFullscreen && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 opacity-50 z-40"></div>
+      )}
+      
+      <Header onToggleFullscreen={handleToggleFullscreen} isFullscreen={isFullscreen} />
+      <div className="p-4 overflow-y-auto space-y-3 flex-grow">
+        {messages.map((msg, index) => (
+          <MessageBubble key={index} text={msg.text} sender={msg.sender} timestamp={msg.timestamp.getTime()} />
+        ))}
+        {isLoading && <LoadingDots />}
+        <div ref={messageEndRef} />
+      </div>
+      <div className="z-50">
+        <InputField value={inputValue} onChange={handleInputChange} onSend={handleSend} isLoading={isLoading} />
       </div>
     </div>
-  );  
+  );
 };
 
 export default ChatBox;

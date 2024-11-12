@@ -9,13 +9,13 @@ const InputField: React.FC<InputFieldProps> = ({ value, onChange, onSend, isLoad
   const { handleKeyDown } = useSendOnEnter({ onSend });
 
   return (
-    <div className="p-4 border-t border-gray-300 flex items-center space-x-4 bg-white">
+    <div className="p-4 border-t border-gray-300 flex items-center space-x-4 bg-gray-200">
       <textarea
         ref={textAreaRef}
-        className={`flex-1 p-2 border rounded-md resize-none ${paragraph} ${
+        className={`flex-1 p-2 border rounded-lg resize-none overflow-y-auto max-h-48 ${paragraph} ${
           isLoading ? 'opacity-50' : ''
         }`}
-        placeholder="Message Adili..."
+        placeholder="Message Adili"
         value={value}
         onChange={onChange}
         onKeyDown={handleKeyDown}

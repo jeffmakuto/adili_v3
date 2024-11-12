@@ -1,13 +1,39 @@
-import { useOnlineStatus } from '@/hooks/use-online-status'
-import { heading } from '@/styles/values'
+import Image from 'next/image'
+import { HiOutlineArrowsExpand, HiX } from 'react-icons/hi'
 
-const Header: React.FC = () => {
-  const isOnline = useOnlineStatus();
-
+const Header = ({ onToggleFullscreen, isFullscreen }: { onToggleFullscreen: () => void; isFullscreen: boolean }) => {
   return (
-    <header className="flex items-center justify-between px-10 bg-gray-100 text-gray-800 rounded-t-md shadow-md">
-      <div className={heading}>Adili</div>
-      <div className={heading}>{isOnline ? 'Online' : 'Offline'}</div>
+    <header className="bg-gray-200 shadow-lg">
+      <div className="container mx-auto flex items-center justify-between px-2 py-4">
+        {/* Avatar */}
+        <div className="mr-4">
+          <Image 
+            src='/images/banner.JPG'
+            alt='Avatar' 
+            width={100} 
+            height={100} 
+            className='rounded-full'
+          />
+        </div>
+
+        {/* Name and Title */}
+        <div>
+          <div className="text-xl font-semibold">Adili</div>
+          <div className="text-sm text-gray-500">AI Assistant</div>
+        </div>
+
+        {/* Maximize/Minimize Button */}
+        <button 
+          onClick={onToggleFullscreen} 
+          className="p-2 rounded-full bg-gray-300 hover:bg-gray-400 z-50"
+        >
+          {isFullscreen ? (
+            <HiX className="text-xl" />
+          ) : (
+            <HiOutlineArrowsExpand className="text-xl" />
+          )}
+        </button>
+      </div>
     </header>
   );
 };
