@@ -36,7 +36,7 @@ const FloatingChatButton: React.FC = () => {
       {isChatOpen && (
         <div 
           ref={chatBoxRef} 
-          className="fixed bottom-12 right-4 z-50 w-96 h-3/5 bg-white rounded-lg flex flex-col"
+          className="fixed bottom-12 right-4 z-50 w-3/4 sm:w-3/4 md:w-96 lg:w-96 h-3/5 sm:h-3/4 md:h-3/4 lg:h-3/4 bg-white rounded-lg flex flex-col"
         >
           <ChatBox />
         </div>
