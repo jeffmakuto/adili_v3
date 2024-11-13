@@ -6,8 +6,8 @@ const EthicsLogo: React.FC = () => {
       <Image
         src="/images/act-right-speak-up-logo.png"
         alt="Act Right Speak Up Logo"
-        width={460}
-        height={301}
+        width={500}
+        height={300}
         style={{ objectFit: 'cover' }}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority
