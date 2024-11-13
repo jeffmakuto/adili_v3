@@ -11,7 +11,9 @@ const Ambassadors: React.FC = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="shadow-lg mt-8 md:mb-8">
-          <EthicsLogo />
+          <div className="mb-4">
+            <EthicsLogo />
+          </div>
           <VideoCarousel />
         </div>
         <div className="mb-8">

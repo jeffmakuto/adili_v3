@@ -3,10 +3,9 @@ import Image from 'next/image'
 const EthicsLogo: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-auto">
-      <h1 className="text-xl md:text-2xl lg:text-4xl text-red-600 font-bold mb-8">Ethics & Integrity Logo</h1>
       <Image
-        src="/images/logo.png"
-        alt="Ethics Logo"
+        src="/images/act-right-speak-up-logo.png"
+        alt="Act Right Speak Up Logo"
         width={460}
         height={301}
         style={{ objectFit: 'cover' }}
