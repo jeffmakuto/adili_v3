@@ -4,7 +4,7 @@ import EthicalDilemmasIntro from '@/ui/case-studies/intro'
 const Dilemma: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center w-full h-auto mb-4">
+      <div className="flex flex-col justify-center items-center w-full h-auto mb-8">
         <Image
           src="/images/dilemma.png"
           alt="Ethical Dilemma Image"
