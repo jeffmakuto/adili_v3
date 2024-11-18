@@ -8,8 +8,8 @@ const Header = ({ onToggleFullscreen, isFullscreen }: { onToggleFullscreen: () =
         {/* Avatar */}
         <div className="mr-4">
           <Image 
-            src='/images/bot.JPG'
-            alt='Avatar' 
+            src='/images/banner.png'
+            alt='Avatar'
             width={100} 
             height={100}
             className='rounded-full'
