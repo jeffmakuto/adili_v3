@@ -7,7 +7,7 @@ const VisionSection: React.FC = () => {
       {/* Left Column: Image on top, Old Vision below */}
       <div className="flex flex-col flex-1 space-y-4 w-full md:w-1/2">
         <div className="flex justify-center">
-          <SectionImage src="/images/banner.JPG" alt="Vision Image" />
+          <SectionImage src="/images/vision.jpg" alt="Vision Image" />
         </div>
         <div className="flex justify-start">
           <Section 

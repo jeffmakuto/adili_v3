@@ -7,7 +7,7 @@ const MissionSection: React.FC = () => {
       {/* Left Column: Image on top, Old Mission below */}
       <div className="flex flex-col flex-1 space-y-4 w-full md:w-1/2">
         <div className="flex justify-center">
-          <SectionImage src="/images/banner.JPG" alt="Mision image" />
+          <SectionImage src="/images/mission.jpg" alt="Mision image" />
         </div>
         <div className="flex justify-start">
           <Section 
