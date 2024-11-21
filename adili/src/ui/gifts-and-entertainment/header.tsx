@@ -13,7 +13,7 @@ const Header: React.FC = () => {
                 Gifts & Entertainment Principle
             </h1>
             <p className="text-sm md:text-sm lg:text-lg text-gray-700">
-                Gift and entertainment are aimed at building business relationships and generating goodwill and 
+                Gifts and entertainment are aimed at building business relationships and generating goodwill and 
                 should never be used to improperly influence or obligate the recipient to act in our favor or for 
                 something in return.
             </p>
