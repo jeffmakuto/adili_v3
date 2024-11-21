@@ -64,8 +64,24 @@ To run the application locally:
    NEXT_PUBLIC_IC_EMBED_SRC=https://kenyaairwaysplc.sharepoint.com/sites/kqdocshares/omnidocs/_layouts/15/embed.aspx?UniqueId=8d6c08a7-cad4-4186-b4b3-a260a89397e8
    NEXT_PUBLIC_KQ_ETHICS_HOTLINE_URL=http://www.kenyaairways.ethicspoint.com/
    NEXT_PUBLIC_CONTACT_EMAIL=ethics.integrity@kenya-airways.com
-   NEXT_PUBLIC_BOT_API_URL=https://v1-bot-phlc.onrender.com/bot
+   NEXT_PUBLIC_SPONSORSHIP_POLICY_URL=https://kenyaairwaysplc.sharepoint.com/:b:/r/sites/kqdocshares/omnidocs/Manuals%20Library/KQ%20Policies/Sponsorship%20PolicyApproved%20by%20CEO%2020042021.pdf?csf=1&web=1&e=aLRg1E
+   NEXT_PUBLIC_DECLARATION_LINK=https://forms.office.com/pages/responsepage.aspx?id=2ap03WnFOka8FwuiWo-jiJuoJe_UuntDvDF5yRWFgDpUMlc4UktGMjZLNVlMV1ROOUQxMURLSko1WC4u&route=shorturl
+   NEXT_PUBLIC_DATA_PROTECTION_POLICY_URL=https://kenyaairwaysplc.sharepoint.com/:b:/r/Notices/dataprotection/DATA%20PROTECTION%20POLICY%20_Issue%201%20Revision%200.pdf?csf=1&web=1&e=VYgy0R
    NEXT_PUBLIC_FETCH_TIMEOUT=5000
+   NEXT_PUBLIC_PRIVACY_POLICY_URL=
+   NEXT_PUBLIC_COOKIE_POLICY_URL=
+   NEXT_PUBLIC_GIFT_REGISTER=
+   NEXT_PUBLIC_SEXUAL_HARASSMENT_POLICY_URL=
+   NEXT_PUBLIC_WB_POLICY_URL=
+   NEXT_PUBLIC_CM_POLICY_URL=
+   NEXT_PUBLIC_ACCEPTABLE_USE_POLICY_URL=
+   NEXT_PUBLIC_INFO_SECURITY_POLICY_URL=
+   NEXT_PUBLIC_BOT_API_URL=
+   NEXT_PUBLIC_VIDEO_URL=
+   NEXT_PUBLIC_CSDLS_VIDEO_URL=
+   NEXT_PUBLIC_ADILI_VIDEO_URL=
+   NEXT_PUBLIC_CS_VIDEO_URL=
+   NEXT_PUBLIC_CEO_VIDEO_URL=
    ```
 
 ## Adili: The Conversational Bot
