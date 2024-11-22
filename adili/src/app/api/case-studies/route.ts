@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import path from 'path'
 import fs from 'fs'
 
-const VIDEO = process.env.NEXT_PUBLIC_VIDEO_URL;
+const VIDEO = process.env.NEXT_PUBLIC_CS_VIDEO_URL;
 
 export async function GET(request: NextRequest) {
   try {
