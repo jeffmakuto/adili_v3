@@ -68,6 +68,7 @@ To run the application locally:
    NEXT_PUBLIC_DECLARATION_LINK=https://forms.office.com/pages/responsepage.aspx?id=2ap03WnFOka8FwuiWo-jiJuoJe_UuntDvDF5yRWFgDpUMlc4UktGMjZLNVlMV1ROOUQxMURLSko1WC4u&route=shorturl
    NEXT_PUBLIC_DATA_PROTECTION_POLICY_URL=https://kenyaairwaysplc.sharepoint.com/:b:/r/Notices/dataprotection/DATA%20PROTECTION%20POLICY%20_Issue%201%20Revision%200.pdf?csf=1&web=1&e=VYgy0R
    NEXT_PUBLIC_FETCH_TIMEOUT=5000
+   NEXT_PUBLIC_ENVIRONMENTAL_POLICY_URL=https://kenyaairwaysplc.sharepoint.com/:b:/r/sites/kqdocshares/omnidocs/Manuals%20Library/KQ%20Policies/Environmental%20Policy%20Statement%202023.pdf?csf=1&web=1&e=X9NdPF
    NEXT_PUBLIC_PRIVACY_POLICY_URL=
    NEXT_PUBLIC_COOKIE_POLICY_URL=
    NEXT_PUBLIC_GIFT_REGISTER=
