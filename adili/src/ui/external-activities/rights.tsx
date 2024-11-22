@@ -3,7 +3,7 @@ import { heading, paragraph } from '@/styles/values'
 
 const RespectingEmployeeRights: React.FC = () => {
     return (
-        <div className="p-4 mb-6">
+        <div className="p-4 mb-4">
             <div className="flex items-center">
                 <FaUsers
                     className="mr-2 mt-4 w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8"
