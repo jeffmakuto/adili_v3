@@ -1,5 +1,10 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 
+/**
+ * useMobileMenu - Custom hook to handle mobile menu.
+ * 
+ * @returns Object containing mobile menu functionality.
+ */
 const useMobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);

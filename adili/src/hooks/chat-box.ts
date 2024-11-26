@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Message } from '@/types/chat'
 
-/* Custom hook to handle messages, input logic */
+/**
+ * useChat - Custom hook to handle messages, input logic.
+ * 
+ * @returns Object containing chat functionality.
+ */
 export function useChat() {
   /* Start with an empty array to show default content initially */
   const [messages, setMessages] = useState<Message[]>([]);

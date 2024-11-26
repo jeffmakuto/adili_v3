@@ -1,6 +1,15 @@
 import { FaHandHoldingUsd } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Duty Component - Displays a message about the organization's duty to prevent corruption.
+ * 
+ * This component features a section with a heading, an icon, and a description about the duty to prevent corruption within a business.
+ * The component uses styles from Tailwind CSS and custom styles from `@/styles/values` for layout and typography.
+ * It incorporates an icon (`FaHandHoldingUsd`) to visually represent the message.
+ * 
+ * @returns JSX.Element
+ */
 const Duty: React.FC = () => {
     return (
         <div className="bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6 rounded-lg shadow-lg">

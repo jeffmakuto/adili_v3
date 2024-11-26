@@ -1,5 +1,10 @@
 import { FaBuilding } from 'react-icons/fa'
 
+/**
+ * Header Component - Displays the header information.
+ * 
+ * @returns JSX.Element
+ */
 const Header: React.FC = () => {
     return (
         <header className="mb-4">

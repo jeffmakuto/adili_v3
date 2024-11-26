@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * useAutoSwipe - Custom hook for auto-swiping images.
+ * 
+ * @param itemCount - Number of images.
+ * @returns Object containing auto-swipe functionality.
+ */
 const useAutoSwipe = (itemCount: number) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);

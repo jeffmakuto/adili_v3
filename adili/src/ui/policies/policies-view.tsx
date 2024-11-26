@@ -5,6 +5,11 @@ import SearchBar from '@/ui/policies/search-bar'
 import PolicyAccordion from '@/ui/policies/policy-accordion'
 import { policies } from '@/data/policies'
 
+/**
+ * PoliciesView Component - Displays the Policies View.
+ * 
+ * @returns JSX.Element
+ */
 const PoliciesView: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);

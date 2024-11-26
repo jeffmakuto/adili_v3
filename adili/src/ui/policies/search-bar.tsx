@@ -1,6 +1,12 @@
 import { SearchBarProps } from '@/types/policies'
 import { paragraph } from '@/styles/values'
 
+/**
+ * SearchBar Component - Displays the search bar for filtering policies.
+ * 
+ * @param {SearchBarProps} { searchTerm, onSearchChange }
+ * @returns JSX.Element
+ */
 const SearchBar = ({ searchTerm, onSearchChange }: SearchBarProps) => (
   <section className="py-4 px-4 text-center">
     <input

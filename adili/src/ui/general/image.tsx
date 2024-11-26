@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { SectionImageProps } from '@/types/general'
 
+/**
+ * SectionImage Component - Displays an Image in a Section.
+ * 
+ * @param {SectionImageProps} props - Image Source, Image Alt
+ * @returns JSX.Element
+ */
 const SectionImage: React.FC<SectionImageProps> = ({ src, alt }) => {
   return (
     <div className="relative w-full aspect-[3/2]">

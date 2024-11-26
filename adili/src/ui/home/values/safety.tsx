@@ -1,6 +1,11 @@
 import ValuesImage from '@/ui/home/values/values-image'
 import { container, heading, paragraph } from '@/styles/values'
 
+/**
+ * Safety Component - Displays safety information.
+ * 
+ * @returns JSX.Element
+ */
 const Safety: React.FC = () => {
   return (
     <div className={container}>

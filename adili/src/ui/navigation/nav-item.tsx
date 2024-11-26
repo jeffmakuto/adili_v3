@@ -6,6 +6,12 @@ import { NavItemProps } from '@/types/link'
 import { getItemClass, getIconClass, getLinkClass, getDropdownClass, getSubNavLinkClass } from '@/styles/nav-item-styles'
 import useNavItem from '@/hooks/use-nav-item'
 
+/**
+ * NavItem Component - Displays the Navigation Item.
+ * 
+ * @param {NavItemProps} { href, label, icon, isActive, onClick, subNavLinks }
+ * @returns JSX.Element
+ */
 const NavItem: React.FC<NavItemProps & { closeMenu: () => void }> = ({
   href,
   label,

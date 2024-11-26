@@ -1,6 +1,11 @@
 import { useRef, useEffect, useState } from 'react'
 
-/* Hook for managing video playback */
+/**
+ * useVideo - Custom hook for managing video playback.
+ * 
+ * @param isActive - Flag to indicate if the video is active.
+ * @returns Reference to the video element.
+ */
 const useVideo = (isActive: boolean) => {
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -17,7 +22,12 @@ const useVideo = (isActive: boolean) => {
 	return videoRef;
 };
 
-/* Hook for managing a carousel */
+/**
+ * useCarousel - Custom hook for managing a carousel.
+ * 
+ * @param itemCount - Number of items in the carousel.
+ * @returns Object containing carousel functionality.
+ */
 const useCarousel = (itemCount: number) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 

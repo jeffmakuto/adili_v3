@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { ValuesImageProps } from '@/types/values'
 
+/**
+ * ValuesImage Component - Displays image for values.
+ * 
+ * @param {ValuesImageProps} { src, alt }
+ * @returns JSX.Element
+ */
 const ValuesImage: React.FC<ValuesImageProps> = ({ src, alt }) => {
   return (
     <div className="relative w-full aspect-[3/2]">

@@ -7,6 +7,11 @@ import { heading, paragraph } from '@/styles/values'
 import LearnMoreButton from '@/ui/buttons/learn-more'
 import { SliderDots } from '@/ui/header/slider-controls'
 
+/**
+ * Carousel - Main component to display a list of items in a carousel.
+ * 
+ * @param items: Array of items containing title, content, and subLink.
+ */
 const Carousel: React.FC<{ items: Array<{ title: string; content: string; subLink: { href: string; label: string } }> }> = ({ items }) => {
   const { currentIndex, setCurrentIndex, nextItem, prevItem, setIsHovered } = useAutoSwipe(items.length);
 
@@ -23,6 +28,11 @@ const Carousel: React.FC<{ items: Array<{ title: string; content: string; subLin
   );
 };
 
+/**
+ * CarouselContent - Displays the title, content, and LearnMoreButton for each carousel item.
+ * 
+ * @param item: The current item data to be displayed.
+ */
 const CarouselContent: React.FC<{ item: { title: string; content: string; subLink: { href: string; label: string } } }> = ({ item }) => (
   <div className="flex-grow text-center flex flex-col justify-center items-center mb-6">
     <h2 className={`${heading} mb-2`}>{item.title}</h2>
@@ -31,6 +41,12 @@ const CarouselContent: React.FC<{ item: { title: string; content: string; subLin
   </div>
 );
 
+/**
+ * CarouselControls - Displays left and right navigation controls to switch between slides.
+ * 
+ * @param nextItem: Function to go to the next item in the carousel.
+ * @param prevItem: Function to go to the previous item in the carousel.
+ */
 const CarouselControls: React.FC<{ nextItem: () => void; prevItem: () => void }> = ({ nextItem, prevItem }) => (
   <div className="flex justify-between items-center w-full mb-4">
     <button

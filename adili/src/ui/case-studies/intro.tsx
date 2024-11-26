@@ -1,5 +1,10 @@
 import { paragraph } from '@/styles/values'
 
+/**
+ * EthicalDilemmasIntro Component - Displays an introduction to ethical dilemmas.
+ * 
+ * @returns JSX.Element
+ */
 const EthicalDilemmasIntro: React.FC = () => {
   return (
     <div>

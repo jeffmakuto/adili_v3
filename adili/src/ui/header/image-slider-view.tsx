@@ -2,6 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { ImageData } from '@/types/slider'
 
+/**
+ * ImageSliderView Component - Displays the Image Slider.
+ * 
+ * @param {ImageData[]} images - Array of Image Data
+ * @param {number} currentIndex - Current Image Index
+ * @returns JSX.Element
+ */
 const ImageSliderView = ({ images, currentIndex }: { images: ImageData[], currentIndex: number }) => {
   const [containerHeight, setContainerHeight] = useState<number>(460); /* Default height */
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]); /* Initialize with empty array */

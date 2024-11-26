@@ -1,6 +1,14 @@
 import { FaRegFlag } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Obligations Component - Displays a title and description regarding reporting obligations related to bribery.
+ * 
+ * This component informs users about the Kenyan legal requirement to report all forms of bribery within 24 hours.
+ * It includes a link to the KQ ethics hotline for users to report unethical behavior.
+ * 
+ * @returns JSX.Element
+ */
 const Obligations: React.FC = () => {
     const kqEthicsHotlineUrl = process.env.NEXT_PUBLIC_KQ_ETHICS_HOTLINE_URL || '#';
 

@@ -1,6 +1,15 @@
 import { FaTimesCircle } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Impact Component - Displays a title and description about the impact of corruption.
+ * 
+ * This component highlights the detrimental effects of fraud, corruption, and bribery on resources
+ * that are essential for the effective operation of the organization. It uses an icon to visually represent
+ * the concept of negative impact and provides a clear message about the consequences of corruption.
+ * 
+ * @returns JSX.Element
+ */
 const Impact: React.FC = () => {
     return (
         <div className="p-4 mb-6">

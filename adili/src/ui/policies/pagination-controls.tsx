@@ -1,6 +1,12 @@
 import { PaginationControlsProps } from '@/types/policies'
 import { paragraph } from '@/styles/values'
 
+/**
+ * PaginationControls Component - Displays the Pagination Controls.
+ * 
+ * @param {PaginationControlsProps} { currentPage, totalPages, onPrevious, onNext }
+ * @returns JSX.Element
+ */
 const PaginationControls: React.FC<PaginationControlsProps> = ({
     currentPage,
     totalPages,

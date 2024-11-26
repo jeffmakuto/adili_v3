@@ -1,6 +1,12 @@
-import { motion } from 'framer-motion';
-import { MotionSliderProps } from '@/types/slider';
+import { motion } from 'framer-motion'
+import { MotionSliderProps } from '@/types/slider'
 
+/**
+ * MotionSlider Component - Animate Slider Motion.
+ * 
+ * @param {MotionSliderProps} props - Current Index, Direction, Children
+ * @returns JSX.Element
+ */
 const MotionSlider: React.FC<MotionSliderProps> = ({ currentIndex, direction, children }) => {
   return (
     <div style={{ overflow: 'hidden', width: '100%' }}>

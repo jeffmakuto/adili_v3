@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { Dimensions } from '@/types/qr-code'
 
+/**
+ * QRCode Component - Displays a QR Code Image.
+ * 
+ * @param {Dimensions} props - Width, Height
+ * @returns JSX.Element
+ */
 const QRCode: React.FC<Dimensions> = ({ width, height }) => {
   return (
     <div className="relative">

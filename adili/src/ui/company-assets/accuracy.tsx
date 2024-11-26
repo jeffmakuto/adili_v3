@@ -1,6 +1,11 @@
 import { FaCheckCircle } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * MaintainingInformationAccuracy Component - Displays information accuracy guidelines.
+ * 
+ * @returns JSX.Element
+ */
 const MaintainingInformationAccuracy: React.FC = () => {
     return (
         <div className="bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6 rounded-lg shadow-lg">

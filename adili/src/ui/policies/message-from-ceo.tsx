@@ -1,5 +1,10 @@
 import CEOVideo from '@/ui/policies/ceo-video'
 
+/**
+ * MessageFromCEO Component - Displays the Message from the CEO section.
+ * 
+ * @returns JSX.Element
+ */
 const MessageFromCEO: React.FC = () => {
   return (
     <div className="text-center pt-8 md:pt-16 lg:pt-8">

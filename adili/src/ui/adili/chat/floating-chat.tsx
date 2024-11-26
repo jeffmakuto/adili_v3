@@ -6,8 +6,25 @@ import ChatBox from '@/ui/adili/chat-box'
 import { useChatToggle } from '@/hooks/chat-box'
 import { useClickOutside } from '@/hooks/floating-card'
 
+/**
+ * FloatingChatButton Component
+ * 
+ * This functional React component implements a floating button for toggling a chat interface. 
+ * The button appears fixed at the bottom-right corner of the viewport and opens a chat box 
+ * when clicked. The chat box can be closed by clicking outside of it.
+ * 
+ * Key Features:
+ * - Toggleable chat box
+ * - Responsive design
+ * - Click-outside functionality to close the chat
+ * 
+ * @returns JSX.Element
+ */
 const FloatingChatButton: React.FC = () => {
+  /* Toggle state for the chat box */
   const { isChatOpen, toggleChat } = useChatToggle();
+
+  /* Reference to the chat box for detecting outside clicks */
   const chatBoxRef = useRef<HTMLDivElement>(null);
 
   /* Close the chat if clicked outside */
@@ -24,6 +41,7 @@ const FloatingChatButton: React.FC = () => {
           text-white rounded-full shadow-lg p-4 cursor-pointer animate-bounce`}
         onClick={toggleChat}
       >
+        {/* Icon and Label for Chat Button */}
         {!isChatOpen && (
           <>
             <FaComments className="w-6 h-6" />

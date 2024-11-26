@@ -1,6 +1,11 @@
 import ValuesImage from '@/ui/home/values/values-image'
 import { container, heading, paragraph } from '@/styles/values'
 
+/**
+ * Accountability Component - Displays accountability information.
+ * 
+ * @returns JSX.Element
+ */
 const Accountability: React.FC = () => {
   return (
     <div className={container}>

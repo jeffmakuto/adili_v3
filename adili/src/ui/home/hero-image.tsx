@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+/**
+ * HeroImage Component - Displays the Hero Image.
+ * 
+ * @returns JSX.Element
+ */
 const HeroImage: React.FC = () => {
   return (
     <div className="relative w-full aspect-[3/2]">

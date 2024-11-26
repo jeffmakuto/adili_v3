@@ -1,6 +1,13 @@
 'use client'
-import { MenuToggleButtonProps } from "@/types/link"
 
+import { MenuToggleButtonProps } from '@/types/link'
+
+/**
+ * MenuToggleButton Component - Toggles the menu.
+ * 
+ * @param {MenuToggleButtonProps} { onClick, isOpen }
+ * @returns JSX.Element
+ */
 const MenuToggleButton: React.FC<MenuToggleButtonProps> = ({ onClick, isOpen }) => (
   <button
     onClick={onClick}

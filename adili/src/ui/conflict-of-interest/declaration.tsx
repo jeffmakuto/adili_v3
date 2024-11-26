@@ -4,6 +4,11 @@ import { heading, paragraph } from '@/styles/values'
 import { DeclarationProps } from '@/types/policies'
 import DeclarationButton from '@/ui/buttons/declaration'
 
+/**
+ * Declaration Component - Displays declaration information.
+ * 
+ * @returns JSX.Element
+ */
 const Declaration: React.FC<DeclarationProps> = () => {
     const declarationLink = process.env.NEXT_PUBLIC_DECLARATION_LINK || '#';
 

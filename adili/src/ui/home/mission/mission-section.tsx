@@ -1,6 +1,11 @@
 import SectionImage from '@/ui/general/image'
 import Section from '@/ui/general/section'
 
+/**
+ * MissionSection Component - Displays the Mission Section.
+ * 
+ * @returns JSX.Element
+ */
 const MissionSection: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 items-center">

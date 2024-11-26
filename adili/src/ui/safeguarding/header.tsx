@@ -2,6 +2,11 @@
 
 import { FaShieldAlt } from 'react-icons/fa'
 
+/**
+ * Header Component - Displays the Header.
+ * 
+ * @returns JSX.Element
+ */
 const Header: React.FC = () => {
     return (
         <header className="mb-4">

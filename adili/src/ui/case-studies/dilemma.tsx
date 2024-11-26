@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import EthicalDilemmasIntro from '@/ui/case-studies/intro'
 
+/**
+ * Ethical Dilemma Component - Displays the Ethical Dilemma Case Study.
+ * 
+ * @returns JSX.Element
+ */
 const Dilemma: React.FC = () => {
   return (
     <>

@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react'
 
+/**
+ * useScrollingAnimation - Custom hook to handle scrolling animation.
+ * 
+ * @param scrollDuration - Duration of the scrolling animation.
+ * @returns Reference to the message element.
+ */
 const useScrollingAnimation = (scrollDuration: number) => {
   const messageRef = useRef<HTMLDivElement | null>(null);
 

@@ -29,6 +29,11 @@ const links: LinkType[] = [
   { href: '/adili-chat', label: 'Adili', icon: faComments, isActive: false },
 ];
 
+/**
+ * Nav Component - Displays the Navigation.
+ * 
+ * @returns JSX.Element
+ */
 const Nav: React.FC = () => (
   <>
     <Menu links={links} />

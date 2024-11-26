@@ -1,5 +1,11 @@
 import { LearnMoreButtonProps } from '@/types/general'
 
+/**
+ * LearnMoreButton Component - Displays a Learn More Button.
+ * 
+ * @param {LearnMoreButtonProps} props - On Click Event Handler
+ * @returns JSX.Element
+ */
 const LearnMoreButton: React.FC<LearnMoreButtonProps> = ({ onClick }) => {
     return (
         <div className="flex justify-center mt-4">

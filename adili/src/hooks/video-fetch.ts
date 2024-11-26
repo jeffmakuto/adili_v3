@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 
+/**
+ * useVideoFetch - Custom hook for fetching and playing a video.
+ * 
+ * @param url - URL of the video.
+ * @returns Object containing video fetch functionality.
+ */
 const useVideoFetch = (url: string) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);

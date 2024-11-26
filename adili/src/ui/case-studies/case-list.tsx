@@ -9,6 +9,9 @@ import Case8 from '@/ui/case-studies/case8/case'
 import Case9 from '@/ui/case-studies/case9/case'
 import Dilemma from '@/ui/case-studies/dilemma'
 
+/**
+ * Case List - Contains the list of all case studies.
+ */
 export const caseList = [
   { title: "Introduction to Ethical Dilemmas", component: <Dilemma /> },
   { title: "Accepting Hospitality from a Business partner in return for a favor", component: <Case1 /> },

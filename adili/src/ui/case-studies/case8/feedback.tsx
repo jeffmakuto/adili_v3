@@ -2,6 +2,14 @@ import { heading, paragraph } from '@/styles/values'
 import CloseButton from '@/ui/buttons/close'
 import { AnimateAnswer } from '@/ui/case-studies/animation'
 
+/**
+ * Feedback Component - Displays feedback when the user makes the correct choice. 
+ * It provides an explanation of the correct action and includes a close button.
+ * 
+ * @param {Function} onClose - Function to close the feedback.
+ * 
+ * @returns JSX.Element
+ */
 const Feedback: React.FC<{ onClose: () => void }> = ({ onClose }) => (
   <AnimateAnswer>
     <h2

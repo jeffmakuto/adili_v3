@@ -4,6 +4,11 @@ import React from 'react'
 import useScrollingAnimation from '@/hooks/scroll'
 import scrollContent from '@/data/scroll-content.json'
 
+/**
+ * ScrollingMessage Component - Displays a scrolling message.
+ * 
+ * @returns JSX.Element
+ */
 const ScrollingMessage: React.FC = () => {
   const scrollDuration = 60;
   const messageRef = useScrollingAnimation(scrollDuration);

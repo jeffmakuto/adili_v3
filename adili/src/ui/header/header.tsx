@@ -2,6 +2,11 @@ import ScrollingMessage from '@/ui/header/scroll'
 import Nav from '@/ui/navigation/nav'
 import ImageSlider from '@/ui/header/slider'
 
+/**
+ * Header Component - Displays the Header Information.
+ * 
+ * @returns JSX.Element
+ */
 export default function Header() {
   return (
     <header>

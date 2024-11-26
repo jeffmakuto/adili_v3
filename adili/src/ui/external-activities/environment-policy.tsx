@@ -1,6 +1,11 @@
 import { FaGlobe } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * EnvironmentalPolicy Component - Displays the environmental policy information.
+ * 
+ * @returns JSX.Element
+ */
 const EnvironmentalPolicy: React.FC = () => {
     const environmentalPolicyUrl = process.env.NEXT_PUBLIC_ENVIRONMENTAL_POLICY_URL || '#';
     return (

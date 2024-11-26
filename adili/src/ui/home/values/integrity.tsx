@@ -1,6 +1,11 @@
 import ValuesImage from '@/ui/home/values/values-image'
 import { container, heading, paragraph } from '@/styles/values'
 
+/**
+ * Integrity Component - Displays integrity information.
+ * 
+ * @returns JSX.Element
+ */
 const Integrity: React.FC = () => {
   return (
     <div className={container}>

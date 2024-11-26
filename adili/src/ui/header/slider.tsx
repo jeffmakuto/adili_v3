@@ -5,6 +5,11 @@ import { SliderControls, SliderDots } from '@/ui/header/slider-controls'
 import useImageSlider from '@/hooks/auto-swipe'
 import { images } from '@/data/slider'
 
+/**
+ * ImageSlider Component - Displays an Image Slider.
+ * 
+ * @returns JSX.Element
+ */
 export default function ImageSlider(): JSX.Element {
   const {
     currentIndex,

@@ -1,5 +1,10 @@
 import { useEffect, useRef } from 'react'
 
+/**
+ * Custom hook to auto-resize a textarea based on its content.
+ * @param value The value of the textarea.
+ * @returns A reference to the textarea element.
+ */
 const useAutoResizeTextArea = (value: string) => {
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
 

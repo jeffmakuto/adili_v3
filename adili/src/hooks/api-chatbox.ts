@@ -2,6 +2,11 @@ import { useRef, useState, useEffect } from 'react'
 import { useChat } from '@/hooks/chat-box'
 import { Message } from '@/types/chat'
 
+/**
+ * useChatBox - Custom hook for chat box functionality.
+ * 
+ * @returns Object containing chat box functionality.
+ */
 const useChatBox = () => {
   const { messages, inputValue, handleInputChange } = useChat();
   const [isLoading, setIsLoading] = useState(false);

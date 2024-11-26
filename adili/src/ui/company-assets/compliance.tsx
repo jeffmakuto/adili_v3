@@ -1,6 +1,11 @@
 import { FaFileContract } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * ComplianceWithPolicies Component - Displays compliance with policies information.
+ * 
+ * @returns JSX.Element
+ */
 const ComplianceWithPolicies: React.FC = () => {
     const acceptableUsePolicyUrl = process.env.NEXT_PUBLIC_ACCEPTABLE_USE_POLICY_URL || '#';
     const infoSecurityPolicyUrl = process.env.NEXT_PUBLIC_INFO_SECURITY_POLICY_URL || '#';

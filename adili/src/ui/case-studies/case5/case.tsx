@@ -6,7 +6,13 @@ import Scenario from '@/ui/case-studies/case5/scenario'
 import WrongChoiceModal from '@/ui/case-studies/wrong-choice'
 import useCase from '@/hooks/use-case'
 
-const Case4: React.FC = () => {
+/**
+ * Case5 Component - Displays a scenario and feedback based on the user's choice. 
+ * Shows a modal when the user makes the wrong choice.
+ * 
+ * @returns JSX.Element
+ */
+const Case5: React.FC = () => {
 	const {
 		choice,
 		showModal,
@@ -29,4 +35,4 @@ const Case4: React.FC = () => {
 	);
 };
 
-export default Case4;
+export default Case5;

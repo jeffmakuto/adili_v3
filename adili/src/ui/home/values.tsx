@@ -3,6 +3,11 @@ import CustomerObsession from '@/ui/home/values/customer-obession'
 import Integrity from '@/ui/home/values/integrity'
 import Accountability from '@/ui/home/values/accountability'
 
+/**
+ * Values Component - Displays core values information.
+ * 
+ * @returns JSX.Element
+ */
 const Values: React.FC = () => {
   return (
     <section className="w-full bg-gray-50 py-8">

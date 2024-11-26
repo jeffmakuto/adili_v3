@@ -1,6 +1,12 @@
 import { SliderControlsProps, SliderDotsProps } from '@/types/slider'
 import { ChevronLeftIcon, ChevronRightIcon, RedTriangleLeftIcon, RedTriangleRightIcon } from '@/ui/header/chevron-icons'
 
+/**
+ * SliderControls Component - Displays Slider Controls.
+ * 
+ * @param {SliderControlsProps} props - Previous Slide, Next Slide
+ * @returns JSX.Element
+ */
 export const SliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextSlide }) => {
   return (
     <>
@@ -24,6 +30,12 @@ export const SliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextS
   );
 };
 
+/**
+ * RedSliderControls Component - Displays Red Slider Controls.
+ * 
+ * @param {SliderControlsProps} props - Previous Slide, Next Slide
+ * @returns JSX.Element
+ */
 export const RedSliderControls: React.FC<SliderControlsProps> = ({ prevSlide, nextSlide }) => {
   return (
     <>
@@ -45,6 +57,12 @@ export const RedSliderControls: React.FC<SliderControlsProps> = ({ prevSlide, ne
   );
 };
 
+/**
+ * SliderDots Component - Displays Slider Dots.
+ * 
+ * @param {SliderDotsProps} props - Images, Current Index, Set Current Index
+ * @returns JSX.Element
+ */
 export function SliderDots({ images, currentIndex, setCurrentIndex }: SliderDotsProps): JSX.Element {
   return (
     <div className="absolute bottom-4 w-full flex justify-center space-x-1 md:space-x-2">

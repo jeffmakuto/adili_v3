@@ -5,6 +5,9 @@ import { heading, paragraph } from '@/styles/values'
 
 const SIGN_INTEGRITY_CODE = process.env.NEXT_PUBLIC_SIGN_INTEGRITY_CODE || "#";
 
+/**
+ * PolicyHeader - Displays the title, icon, and expandable functionality for each policy.
+ */
 const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: boolean; onToggle: () => void }> = ({ policy, isExpanded, onToggle }) => (
     <div
         className="flex justify-between items-center cursor-pointer
@@ -40,6 +43,9 @@ const PolicyHeader: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: bo
     </div>
 );
 
+/**
+ * PolicyContent - Displays the policy description and a link to view the document.
+ */
 const PolicyContent: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: boolean; index: number }> = ({ policy, isExpanded, index }) => (
     isExpanded && (
         <div id={`policy-content-${policy.id}`} className="mt-4 px-4">
@@ -73,6 +79,10 @@ const PolicyContent: React.FC<{ policy: PolicyItemProps['policy']; isExpanded: b
     )
 );
 
+/**
+ * PolicyItem - Main component that ties the header and content together for each policy item.
+ * Handles the toggling and displaying of the expanded content.
+ */
 const PolicyItem: React.FC<PolicyItemProps> = ({ policy, isExpanded, index, onToggle }) => {
     return (
         <div className="border-b py-4 border-[#0d0d0d]">

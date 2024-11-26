@@ -1,6 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { AnimateMenuProps } from '@/types/link'
 
+/**
+ * AnimatedMenu Component - Animates the menu.
+ * 
+ * @param {AnimateMenuProps} { isOpen, closeMenu, menuRef, className, children }
+ * @returns JSX.Element
+ */
 const variants = {
     open: { opacity: 1, x: 0, transition: { duration: 0, ease: [0.25, 0.1, 0.25, 1] } },
     closed: { opacity: 0, x: '-100%', transition: { duration: 0, ease: [0.25, 0.1, 0.25, 1] } },

@@ -1,5 +1,10 @@
-import { heading, paragraph } from '@/styles/values';
+import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Guidelines Component - Displays the conflict of interest guidelines.
+ * 
+ * @returns JSX.Element
+ */
 const Guidelines: React.FC = () => {
     return (
         <>

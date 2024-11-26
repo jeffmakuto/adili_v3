@@ -1,6 +1,11 @@
 import { FaRegHandshake } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Guidelines Component - Displays engagement guidelines information.
+ * 
+ * @returns JSX.Element
+ */
 const Guidelines: React.FC = () => {
     const integrityCodeUrl = process.env.NEXT_PUBLIC_IC_EMBED_SRC || '#';
 

@@ -1,6 +1,11 @@
 import SectionImage from '@/ui/general/image'
 import Section from '@/ui/general/section'
 
+/**
+ * VisionSection Component - Displays the Vision Section.
+ * 
+ * @returns JSX.Element
+ */
 const VisionSection: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 items-center">

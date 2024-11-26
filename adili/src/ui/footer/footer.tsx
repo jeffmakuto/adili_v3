@@ -1,6 +1,11 @@
 import ReturnToTopButton from '@/ui/buttons/return-to-top'
 import { footerStyles } from '@/styles/footer'
 
+/**
+ * Footer Component - Displays the Footer section.
+ * 
+ * @returns JSX.Element
+ */
 const Footer: React.FC = () => {
   const kqEthicsHotlineUrl = process.env.NEXT_PUBLIC_KQ_ETHICS_HOTLINE_URL || '#';
   const privacyPolicyUrl = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL || '#';

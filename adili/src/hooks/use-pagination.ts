@@ -1,7 +1,13 @@
 import { useState } from 'react'
 import { calculatePagination } from '@/hooks/calculate-pagination'
 
-
+/**
+ * usePagination - Custom hook to handle pagination logic.
+ * 
+ * @param totalItems - Total number of items.
+ * @param itemsPerPage - Number of items per page.
+ * @returns Object containing pagination functionality.
+ */
 const usePagination = (totalItems: number, itemsPerPage: number) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
 

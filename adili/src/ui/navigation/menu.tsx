@@ -4,6 +4,12 @@ import { usePathname } from 'next/navigation'
 import NavItem from '@/ui/navigation/nav-item'
 import { MenuProps } from '@/types/link'
 
+/**
+ * Menu Component - Displays the Menu.
+ * 
+ * @param {MenuProps} { links }
+ * @returns JSX.Element
+ */
 const Menu: React.FC<MenuProps> = ({ links }) => {
   const asPath = usePathname();
 

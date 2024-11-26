@@ -6,6 +6,16 @@ import { SliderDots } from '@/ui/header/slider-controls'
 import { useCarousel } from '@/hooks/video-carousel'
 import videos from '@/data/videos'
 
+/**
+ * VideoCarousel Component
+ * 
+ * The `VideoCarousel` component is a carousel for displaying a series of videos.
+ * Users can navigate between the videos using next/previous buttons or by
+ * clicking on the dot navigation. The carousel supports smooth sliding transitions
+ * between videos.
+ * 
+ * @returns JSX.Element
+ */
 const VideoCarousel: React.FC = () => {
   const { currentIndex, handleNext, handlePrev, setCurrentIndex } = useCarousel(videos.length);
 
@@ -26,8 +36,11 @@ const VideoCarousel: React.FC = () => {
         </div>
 
         <div className="mt-16">
-            <SliderControls prevSlide={handlePrev} nextSlide={handleNext} />
-            <SliderDots images={videos} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+          {/* Slider Controls (Previous and Next Buttons) */}
+          <SliderControls prevSlide={handlePrev} nextSlide={handleNext} />
+
+          {/* Dot Navigation for Video Carousel */}
+          <SliderDots images={videos} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
         </div>
       </div>
     </div>

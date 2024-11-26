@@ -1,5 +1,10 @@
 import TeamVideo from '@/ui/case-studies/team-video'
 
+/**
+ * MeetTheTeam Component - Displays the Meet The Team section.
+ * 
+ * @returns JSX.Element
+ */
 const MeetTheTeam: React.FC = () => {
   return (
     <div className="shadow-lg text-center pt-8 md:pt-16 lg:pt-8">

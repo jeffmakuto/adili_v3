@@ -5,6 +5,11 @@ import MissionCard from '@/ui/home/mission/mission-card'
 import LearnMoreButton from '@/ui/general/learn-more'
 import { buttonWrapper } from '@/styles/values'
 
+/**
+ * Mission Component - Displays the Mission Information.
+ * 
+ * @returns JSX.Element
+ */
 const Mission: React.FC = () => {
   const [isCardOpen, setIsCardOpen] = useState(false);
 

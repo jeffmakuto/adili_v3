@@ -2,6 +2,12 @@ import { heading } from '@/styles/values'
 import { caseList } from '@/ui/case-studies/case-list'
 import { CaseSelectorProps } from '@/types/cases'
 
+/**
+ * CaseSelector Component - Displays a list of case studies to choose from.
+ * 
+ * @param {CaseSelectorProps} props - Selected Case Index, Set Selected Case Index
+ * @returns JSX.Element
+ */
 const CaseSelector: React.FC<CaseSelectorProps> = ({ selectedCaseIndex, setSelectedCaseIndex }) => (
   <div className="text-center p-6">
     <h2 className={heading}>Ethics & Integrity Case Studies</h2>

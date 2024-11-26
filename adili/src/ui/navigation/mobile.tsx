@@ -9,6 +9,12 @@ import QRCode from '@/ui/codes/qr-code'
 import styles from '@/styles/mobile-menu.module.css'
 import AnimatedMenu from '@/ui/navigation/animate-menu'
 
+/**
+ * MobileMenu Component - Displays the Mobile Menu.
+ * 
+ * @param {MenuProps} { links }
+ * @returns JSX.Element
+ */
 const MobileMenu: React.FC<MenuProps> = ({ links }) => {
   const { isOpen, toggleMenu, closeMenu, setIsSubMenuOpen, menuRef } = useMobileMenu();
   const asPath = usePathname();

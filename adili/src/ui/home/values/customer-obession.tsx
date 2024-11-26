@@ -1,6 +1,11 @@
 import ValuesImage from '@/ui/home/values/values-image'
 import { container, heading, paragraph } from '@/styles/values'
 
+/**
+ * CustomerObsession Component - Displays customer obsession information.
+ * 
+ * @returns JSX.Element
+ */
 const CustomerObsession: React.FC = () => {
   return (
     <div className={container}>

@@ -1,6 +1,9 @@
 import { FaPeopleCarry } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * Commitment - Displays the commitment to maintaining a safe and respectful workplace.
+ */
 const Commitment: React.FC = () => {
     const sexualHarassmentPolicyUrl = process.env.NEXT_PUBLIC_SEXUAL_HARASSMENT_POLICY_URL || '#';
 

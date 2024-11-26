@@ -1,5 +1,10 @@
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * AcceptanceGuidelines Component - Displays acceptance guidelines information.
+ * 
+ * @returns JSX.Element
+ */
 const AcceptanceGuidelines: React.FC = () => {
     return (
         <>

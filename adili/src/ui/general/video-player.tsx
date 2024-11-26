@@ -4,6 +4,12 @@ import LoadingSpinner from '@/ui/general/loading'
 import useVideoFetch from '@/hooks/video-fetch'
 import { VideoPlayerProps } from '@/types/general'
 
+/**
+ * VideoPlayer Component - Displays a Video Player.
+ * 
+ * @param {VideoPlayerProps} props - Video URL, Video Player Class Name
+ * @returns JSX.Element
+ */
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ className, videoUrl }) => {
   const { videoRef, isLoading, hasError, handleVideoError } = useVideoFetch(videoUrl);
 

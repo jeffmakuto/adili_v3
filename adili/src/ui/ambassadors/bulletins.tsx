@@ -1,5 +1,15 @@
 import ImageSlider from '@/ui/ambassadors/slider'
 
+/**
+ * Bulletins Component
+ * 
+ * The `Bulletins` component is used to display a title and an image slider. 
+ * The title "Bulletins" is displayed along with an image slider that showcases different images, 
+ * possibly representing important bulletins or announcements. The `ImageSlider` component is responsible 
+ * for rendering the actual slider functionality.
+ * 
+ * @returns JSX.Element
+ */
 const Bulletins: React.FC = () => {
   return (
     <div className="text-center pt-8">

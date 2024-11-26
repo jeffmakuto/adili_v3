@@ -1,5 +1,10 @@
 import { useState } from 'react'
 
+/**
+ * useCase - Custom hook to handle user choices and feedback.
+ * 
+ * @returns Object containing choice and modal functionality.
+ */
 const useCase = () => {
 	const [choice, setChoice] = useState<string | null>(null);
 	const [showModal, setShowModal] = useState(false);

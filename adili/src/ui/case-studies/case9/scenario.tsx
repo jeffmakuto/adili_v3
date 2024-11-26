@@ -3,6 +3,14 @@ import { AnimateButton, AnimateScenario } from '@/ui/case-studies/animation'
 import { ScenarioProps } from '@/types/cases'
 import { choices9 } from '@/data/choices'
 
+/**
+ * Scenario Component - Displays a scenario to the user, allows them to choose a response 
+ * and pass their choice to a handler function.
+ * 
+ * @param {Function} handleChoice - Function to handle the user's selected choice.
+ * 
+ * @returns JSX.Element
+ */
 const Scenario: React.FC<ScenarioProps> = ({ handleChoice }) => (
   <AnimateScenario>
     <p className={`${heading} lg:mb-8`}>Reporting Misconduct</p>

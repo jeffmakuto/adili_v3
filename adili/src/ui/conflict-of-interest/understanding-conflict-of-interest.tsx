@@ -1,6 +1,11 @@
 import { FaClipboardCheck } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * UnderstandingConflictOfInterest Component - Displays conflict of interest information.
+ * 
+ * @returns JSX.Element
+ */
 const UnderstandingConflictOfInterest: React.FC = () => {
     return (
         <div className="bg-[#F9E9E4] border-l-4 border-red-600 p-4 mb-6 rounded-lg shadow-lg">

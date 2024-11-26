@@ -5,6 +5,12 @@ import MeetTheTeam from '@/ui/case-studies/meet-the-team'
 import CaseSelector from '@/ui/case-studies/case-selector'
 import { caseList } from '@/ui/case-studies/case-list'
 
+/**
+ * CaseController Component - Manages the display and selection of various case studies.
+ * Allows the user to select a case and view its content dynamically.
+ * 
+ * @returns JSX.Element
+ */
 const CaseController: React.FC = () => {
   const [selectedCaseIndex, setSelectedCaseIndex] = useState(0) /* State to manage selected case */
 

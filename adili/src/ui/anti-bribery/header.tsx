@@ -1,5 +1,14 @@
 import { FaBan } from 'react-icons/fa'
 
+/**
+ * Header Component - Displays a title and description about the Anti-Bribery and Anti-Corruption Principle.
+ * 
+ * This component includes a header with an icon representing anti-corruption principles, a title, and a description
+ * about Kenya Airways' stance on bribery and corruption. The title is styled with bold typography, and the description
+ * provides a brief explanation of the policy.
+ * 
+ * @returns JSX.Element
+ */
 const Header: React.FC = () => {
     return (
         <header className="mb-4">

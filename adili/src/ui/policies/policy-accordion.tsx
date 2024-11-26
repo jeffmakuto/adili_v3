@@ -4,6 +4,12 @@ import NoPolicies from '@/ui/policies/no-policies'
 import { PolicyAccordionProps } from '@/types/policies'
 import usePagination from '@/hooks/use-pagination'
 
+/**
+ * PolicyAccordion Component - Displays the Policy Accordion.
+ * 
+ * @param {PolicyAccordionProps} { policies, expandedIndex, onToggle }
+ * @returns JSX.Element
+ */
 const PolicyAccordion: React.FC<PolicyAccordionProps> = ({
   policies,
   expandedIndex,

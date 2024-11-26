@@ -1,6 +1,9 @@
 import { FaSearch } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * DueDiligenceResponsibilities - Displays the due diligence responsibilities for preventing crimes.
+ */
 const DueDiligenceResponsibilities: React.FC = () => {
     return (
         <div className="p-4 mb-6">

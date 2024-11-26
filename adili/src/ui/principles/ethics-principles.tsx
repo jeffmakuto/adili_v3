@@ -1,6 +1,11 @@
 import { carouselItems } from '@/data/ethics-principles'
 import Carousel from '@/ui/principles/carousel'
 
+/**
+ * EthicsPrinciples Component - Displays the Ethics and Integrity Principles section.
+ * 
+ * @returns JSX.Element
+ */
 const EthicsPrinciples: React.FC = () => {
   return (
     <div className="text-center pt-8">

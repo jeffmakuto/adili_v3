@@ -5,6 +5,11 @@ import VisionCard from '@/ui/home/vision/vision-card'
 import LearnMoreButton from '@/ui/general/learn-more'
 import { buttonWrapper } from '@/styles/values'
 
+/**
+ * Vision Component - Displays the Vision Information.
+ * 
+ * @returns JSX.Element
+ */
 const Vision: React.FC = () => {
   const [isCardOpen, setIsCardOpen] = useState(false);
 

@@ -2,6 +2,12 @@
 
 import { FallbackProps } from 'react-error-boundary'
 
+/**
+ * GlobalError - Component to display a global error message.
+ * 
+ * @param error The error object.
+ * @param resetErrorBoundary Function to reset the error boundary.
+ */
 function GlobalError({ error, resetErrorBoundary }: FallbackProps) {
   return (
     <div>

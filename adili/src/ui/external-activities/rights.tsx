@@ -1,6 +1,11 @@
 import { FaUsers } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * RespectingEmployeeRights Component - Displays the respecting employee rights information.
+ * 
+ * @returns JSX.Element
+ */
 const RespectingEmployeeRights: React.FC = () => {
     return (
         <div className="p-4 mb-4">

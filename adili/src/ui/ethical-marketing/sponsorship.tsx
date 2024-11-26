@@ -1,6 +1,11 @@
 import { FaHandshake } from 'react-icons/fa'
 import { heading, paragraph } from '@/styles/values'
 
+/**
+ * SponsorshipPolicy Component - Displays the sponsorship policy information.
+ * 
+ * @returns JSX.Element
+ */
 const SponsorshipPolicy: React.FC = () => {
     const sponsorshipPolicyUrl = process.env.NEXT_PUBLIC_SPONSORSHIP_POLICY_URL || '#';
 
