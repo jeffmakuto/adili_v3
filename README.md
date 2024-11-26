@@ -37,7 +37,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://jeffmakuto@dev.azure.com/jeffmakuto/Adili/_git/Adili
+   git clone https://github.com/jeffmakuto/adili_v3.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -92,6 +92,18 @@ To run the application locally:
 - **Answering Questions**: Adili can respond to queries related to ethics and integrity.
 - **Engaging in Dialogues**: Users can have meaningful conversations with Adili about ethical dilemmas and principles.
 - **Resource Recommendations**: Based on user queries, Adili can suggest relevant ethics and integrity resources.
+- **Training on Policies and Case Studies**: The bot is trained on the Integrity Code, Partner Code of Conduct, and other relevant policies, FAQs, and case studies to effectively guide users through real-life ethical dilemmas.
+
+### Privacy and Bot Modes
+Adili is available in two modes:
+1. **Rule-Based Bot**: This version answers FAQs and provides pre-defined responses without retaining user inputs.
+2. **Conversational Bot**: This advanced version constantly learns from user inputs to improve its ability to address complex ethical queries.
+
+### Data Privacy:
+
+* Users are informed about the potential use of their inputs to train the bot. This process may involve personal data if shared during interactions.
+* Users can opt out of sharing their inputs. In such cases, they will interact with the **Rule-Based Bot** that does not use their data for training.
+* All collected data is handled in compliance with the organization's privacy policy and relevant data protection regulations.
 
 ### Example Interaction
 
