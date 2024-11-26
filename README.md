@@ -147,6 +147,5 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENS
 
 ## Contact
 
-Jeff Makuto - [Email](mailto:hjeffmakuto@proton.me)  
-Project Link: [Adili Repository](https://jeffmakuto@dev.azure.com/jeffmakuto/Adili/_git/Adili)  
+Jeff Makuto - [Email](mailto:hjeffmakuto@proton.me) 
 Live Demo: [Adili Website](https://adili-v3.vercel.app/)
