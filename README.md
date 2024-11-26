@@ -6,6 +6,7 @@
 - [Description](#description)
 - [Features](#features)
 - [Technologies](#technologies)
+- [Directory Structure](#directory-structure)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Adili: The Conversational Bot](#adili-the-conversational-bot)
@@ -31,6 +32,53 @@ The Ethics and Integrity website aims to disseminate ethical behavior and integr
 - **Frontend**: Next.js
 - **Deployment**: Vercel (for the frontend)
 
+## Directory Structure
+Here is the detailed directory structure of the project:
+
+```
+/adili_v3
+├── /public                     # Public static files (images, videos, etc.)
+│   ├── /images                 # Image assets
+│   └── /videos                 # Video assets
+├── /src                        # Source code of the project
+│   ├── /app                     # Core application components
+│   │   ├── /adili-chat          # Chatbot related components
+│   │   ├── /case-studies        # Case studies related pages
+│   │   ├── /our-ambassadors     # Pages for ethics ambassadors
+│   │   ├── /policies            # Policies related pages
+│   │   ├── /principles          # Ethical principles pages
+│   │   ├── /favicon.ico         # Favicon file
+│   │   ├── /layout.tsx          # Layout component for the app
+│   │   ├── /manifest.ts         # Manifest file
+│   │   ├── /robots.ts           # Robots configuration
+│   │   └── /page.tsx            # Main page component
+│   ├── /data                    # Data related files (e.g., mock data)
+│   ├── /errors                  # Error handling components
+│   ├── /hooks                   # Custom React hooks
+│   ├── /styles                  # Global styles and theme configurations
+│   ├── /types                   # TypeScript types
+│   └── /ui                      # UI components and sections
+│       ├── /act-right            # Act right related UI
+│       ├── /case-studies         # UI components for case studies
+│       ├── /ethical-marketing    # Ethical marketing UI components
+│       ├── /header               # Header component
+│       ├── /principles           # UI for ethical principles
+│       ├── /footer               # Footer component
+│       ├── /navigation           # Navigation components
+│       ├── /buttons              # Button components
+│       └── /general              # General UI components
+├── /node_modules                # Installed dependencies (auto-generated)
+├── /public                      # Static files and assets
+├── next.config.mjs              # Next.js configuration file
+├── next-env.d.ts                # TypeScript definitions for Next.js
+├── postcss.config.mjs           # PostCSS configuration file
+├── tailwind.config.ts           # Tailwind CSS configuration
+├── package.json                 # Project metadata and dependencies
+├── package-lock.json            # Lock file for npm dependencies
+├── tsconfig.json                # TypeScript configuration file
+└── README.md                    # Project documentation
+
+```
 ## Installation
 
 Follow these steps to set up the project locally:
