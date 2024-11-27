@@ -18,7 +18,7 @@ const Header: React.FC = () => {
                 Safeguarding Principle
             </h1>
             <p className="text-sm md:text-sm lg:text-lg text-gray-700">
-                We recognizes it&rsquo;s our responsibility to use our influence to promote and protect human 
+                We recognize it&rsquo;s our responsibility to use our influence to promote and protect human 
                 rights and ensuring that our business operations do not contribute directly or 
                 indirectly to human rights abuses.​
             </p>
